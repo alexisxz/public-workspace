@@ -1,0 +1,344 @@
+1.1 Persamento Computacional?
+Processo de pensamento envolvido na expressão de soluções em passos computacionais
+ou algoritmos que podem ser implementador no computador.
+
+Não é uma disciplina acadêmia, é uma habilidade generalista (matemática, leitura, escrita)
+
+Baseado em 4 pilares:
+Decomposição - Dividir um problema em varios pequenos para facilitar a resolução
+Reconhecimendo de padrões - Identificar padrões ou tendências, similaridades e diferenças
+Abstratação - Definir de modo geral e criar classes, métodos, herença, polimorfismo
+Design de algoritmos - Automatizar: Definir passo a passo a solução do problema
+
+
+Input -> Operator -> Output
+
+Processo Contínuo:
+1. Definir uma solução
+2. Testar a solução
+3. Aperfeiçoamento da solução encontrada
+Teste -> Análise -> Refinamento
+
+Competências:
+1. Pensamento sistemático
+2. Colaboração dentro da equipe
+3. Criatividade e Design
+4. Facilitador
+
+
+-----------------------------------------------------
+1.2 Habilidades Complementares
+
+Raciocínio Lógico: Forma de pensamento estruturado que permite encontra a conslução de um problema
+
+Classificação:
+1. Indução - Fenômeno observado [Ciência inpirica]
+2. Dedução - Leis e teorias [Ciências exatas]
+3. Abdução - Conclusão -> Premissa [Processos investigativos e diagnósticos]
+
+Aperfeiçoamento:
+1. Encontrar solução eficiente
+2. Otimizar processos
+3. Simplificar linhas de códigos
+4. Funções bem definidas
+
+-------------------------------------------------------
+1.3 Pilar: Decomposição
+If you can't solve a problem, there is a easier problem you can solve, find it
+
+-------------------------------------------------------
+1.4 Pilar : Padrões
+Generalizar, com objetivo de obter resolução para problemas diferentes
+
+-------------------------------------------------------
+1.5 Pilar: Abstração / Generalizar
+Processo intelectual de usolamento de um objeto da realidade
+
+-------------------------------------------------------
+1.6 Algoritmos
+Processo de resolução de problemas "step by step" utilizando instruções
+
+Desenvolvimento do programa:
+1. Análise
+2. Algoritmo - Descrevendo o problema
+3. Codificação - Utilizando uma linguagem para descrever o problema
+
+Exemplos de algoritmos:
+Preparar um sanduiche
+Trocar uma lâmpada
+Fazer uma receita de bolo
+Trajeto ao trabalho
+
+Tipos:
+1. Narrativa
+2. Fluxograma
+3. Pseudocódigo (Portugol)
+
+---------------------------------------------------------
+
+2.1 O que é lógica? (aplicada a programação)
+Parte da filosofia que trata das formas do pensamento em geral (dedução, indução, hipótese,
+interência, etc.) e das operações intelectuais que visam à determinação do que é verdadeiro
+ou não.
+
+Uma forma de raciocínio coesia, com ordenação, com verdade.
+
+"Organização e planejamento das instruções, assertivas em um algoritmo, a fim de viabilizar
+a implantação de um programa."
+
+-----------------------------------------------------------
+2.2 Técnicas de lógia de programação
+
+1. Linear: Execução sequenciada e recursos limitados.
+2. Estruturada: Execução com mais de uma opção.
+3. Modular: Varias execuções com partes independentes.
+
+-----------------------------------------------------------
+3.1 Tipologia e variáveis
+Uma estrutura mutável, incerta, instável, inconstante.
+
+Qual a função do computador?
+Computar informações (Dados e instruções)
+
+Tipos:
+1. Númericos (Inteiros e Reais)
+2. Caracteres
+3. Lógico (Verdadeiro(1), Falso(0)) - Booleano
+
+Regras:
+1. Atribuição de um ou mais caracteres
+2. Primeira letra - não número
+3. Sem espaços em branco
+4. Vedado (Utilização de palavras reservadas)
+
+-----------------------------------------------------------
+3.2 Instruções primitivas
+
+Tipos:
+1. Cálculo matemáticos (Unário e Binário)
+
+------------------------------------------------------------
+3.3 Estruturas condicionais e operadores
+
+Tipos:
+1. Operadores relacionais (=; <>; >; <; >=; <=)
+
+Condicionais:
+1. Composta (Se, senão, se_fim)
+2. Encadeada (Se, senão (se, senão), se_fim)
+3. And (Interseção)
+4. Or (União)
+5. Not (Inversão)
+
+------------------------------------------------------------
+3.4 Estruturas de repetição
+
+------------------------------------------------------------
+3.5 Vetores e matrizes
+Um vetor é caracterizado por uma variavel dimensionada com tamanho pré-fixado
+Matrix é uma tabela organizada em linhas e colunas no formado m(linhas) x n(colunas)
+
+Vetor:
+notas_aluno [10, 5, 7, 8]
+
+Matriz:
+matriz_alunos [6][6]
+
+-----------------------------------------------------------
+3.6 funções
+As funções, ou sub-rotinas são blocos de instruções que realizam tarefas específicas
+(Modularização do problema) 
+
+ex.
+funcao mediaEscolar (nota1, nota2)
+	resultado = 0
+	resultado = (nota1 + nota2)/2
+	retorne resultado
+fim funcao
+
+aluno1 = mediaescolar(nota11,nota21)
+aluno2 = mediaescolar(nota12, nota22)
+aluno3 = mediaescolar(nota13 nota23)
+
+------------------------------------------------------------
+3.7 instruções de entrada/saída]
+Consiste na inserção e recebimento de dados do mundo real por meio de ação de alguma
+interface, seja teclado, mouse, arquivos, entre outros.
+
+tipos:
+1. Programada
+2. Interrupção
+
+-------------------------------------------------------------
+4.1 Introdução à linguagens de programação
+Método padronizado composto por um conjunto de regras sintáticas e semânticas de
+implementação de um código fonte
+
+-------------------------------------------------------------
+4.2 Como um computador entender o programa?
+O código alto é enviado para o código baixo (complador) para fazer a tradução
+para a máquina
+
+-------------------------------------------------------------
+4.3 Características de um programa
+
+Características:
+1. Elegibilidade
+2. Redigibilidades
+3. Confiabilidadae
+4. Custo
+
+-------------------------------------------------------------
+4.4 Análises de código
+
+Processos.
+Análise léxica: Particionar -> Classificar -> Eliminar
+Análise sintática: O componente do sistema lingúistico que interligam os constituintes da sentença,
+atruibuindo-lhe uma estrutura"
+Análise semântica: É o estudo do significado, incide sobre a relação entre significantes, como: palavras,
+frases, sinais e símbolos"
+
+-------------------------------------------------------------
+4.5 Paradigmas de programação
+Froma de resolução de problemas com diretrizes e limitações específicas de cada paradigma utilizando
+uma liguagem de programação.
+
+Classificações:
+1. Orientação à objeto [Mais utilizado]
+2. Procedural
+3. Funcional
+4. Estruturado [Mais utilizado]
+5. Computação distribuída
+6. Lógico
+
+Conceitos:
+1. Sequência
+2. Decisão
+3. Iteração
+
+Orientação à Objeto:
+Um objeto é descrito por características específicas, comportamentos e estado - Especificando a class
+1. O que eu tenho? ATRIBUTOS
+2. O que sou capaz de fazer? MÉTODOS
+3. Como faço? ESTADOS
+4. Classificação? MODELOS
+Pilares da orientação a objeto:
+1. Herança - Uma classe herda atributos e metodos de alguma outra classe
+2. Encapsulamento - 
+3. Polimorfismo
+4. Abstração
+
+#############################################################
+INTRODUÇÃO AO GIT E AO GITHUB
+#############################################################
+
+1.1 Entendendo o que é Git e sua importância
+Software Git é um CVS para guardar seu código e compartilhar
+
+Git e GitHub(Microsoft) é diferente!
+
+Benefícios de ambas:
+1. Controle de Versão
+2. Armazenamento em nuvem
+3. Trabalho em equipe
+4. Melhorar seu código
+5. Reconhecimento
+--------------------------------------------------------------
+2. Navegação via command line interface e instalação
+2.1 Comandos básicos para um bom desempenho no terminal
+
+GUI (Graphic User Interface) x CLI (Command line interface z.B. Git)
+GUI - mais responsivo
+
+O que vamos aprender? [Windows] no cmd
+1. Mudar de pastas - cd (change direction) | cd/(voltar pasta) | cd nome_da_pasta (mover para pasta) | cd.. (retrocer um nível)
+2. Listar as pastas - dir
+3. Criar pastas/arquivos - mkdir | echo > nome_do_aquivo nome.txt |
+4. Deletar pastar / arquivos - del nome_do_aquivo (deletar somente arquivos) | rmdir(remover directory) nome_do_repositório /S /Q(remover pasta)
+5. Limpar o terminal - cls (clear screen)
+
+----------------------------------------------------------------
+3. Entendendo como o Git funciona por baixo dos panos
+3.1 Tópicos fundamentais para entender o configfuncionamento do Git
+
+Tópicos:
+1. SHA1 (Secure Hash Algorithm) - Encriptação de um conjunto de 40 dígitos, para identificar um arquivo de forma segura
+2. Objetos fundamentais
+3. Sistema distribuído
+4. Segurança
+
+------------------------------------------------------------------
+3.3 Objetos internos do Git
+
+Objetos:
+1. Blobs - Bloco básico de composição
+2. Trees - Armazena os Blobs e outras Trees
+3. Commits - o SHA1 desse commit é o hash de toda a essa informação, armazenando a Tree
+
+------------------------------------------------------------------
+3.4 Chave SSH e Token
+
+Para clonar o código na sua maquina tem que usar o caminho SSH 
+--------------------------------------------------------------------
+4. Primeiros comando com Git **************** https://web.dio.me/course/introducao-ao-git-e-ao-github/learning/12607816-1128-4906-9645-cbe0f7fcc72b?back=/track/impulso-javascript-evolution&tab=undefined&moduleId=undefined
+4.1 Iniciando o Git e ciando um commit
+- Iniciar o GIT - git init
+- Iniciar o versionamento - git add
+- Criar um commit - git commit
+
+
+--------------------------------------------------------------------
+5. Ciclo de vida dos arquivos no Git
+5.1 Passo a passo no ciclo da vida
+
+Ferramentas git bash:
+1. git status - mostrar sobre o repositorio
+2. mv [arquivo] ./[folder]
+3. git status - mostrando o status e vendo o que não esta adicionado
+4. git add [folder] [arquivo] [etc...] ou * - para adicionar
+5. git commit -m "escrever uma mensagem para ter o historico"
+
+Obs:
+- git add * - adicionando tudo
+
+---------------------------------------------------------------------
+6. Introdução ao GitHub
+6.1 Trabalhando com o GitHub
+
+Ferramentas:
+1. git config --list - Para ver as configurações setados do github
+2. git config --global --unset [config do que quer deletar] - para deletar sua configuaração
+3. git config --global user.email(exemplo) "alexisxzinho@hotmail.com" - para alterar algo
+
+inicializando no github:
+1. criar o repositorio no git
+2. git remote add origin git@github.com:alexisxz/livro-receitas.git - depois que criar o repositório passar a origina:
+3. git remote -v - checar os diretorios cadastrados
+4. git push origin master - enviar o repositório local da sua maquina para o remoto do github
+----------------------------------------------------------------------
+7. Resolvendo conflitos
+7.1 Como os conflitos acontecem no GitHub e como resolvê-los
+
+Ferramentas:
+1.git pull origin master - puxar a versão mais recente do código
+2. git clone [URL] - clonar repositorio git
+
+#############################################################
+CRIANDO SEU PRIMEIRO REPOSITÓRIO NO GITHUB PARA COMPARTILHAR SEU PROGRESSO
+#############################################################
+
+Dinâmica:
+1. Criar repositório no GibHub *******************
+2. git clone [URL] - Clonar ele na pasta local
+3. desenvolver o código na pasta
+4. git add * - para adicionar todos arquivos no repositório
+5. git commit -m "algum comentario" - para fazer todo o commit do repositório
+6. git status - para ver se esta faltando algo
+7. git push origin main - enviar todos os commits pra numver (github)
+8. git pull origin main - caso queira atualizar o repositório local
+
+Desafio:
+
+
+
+
