@@ -1,2 +1,2 @@
 # publich-workspace
-public codes for corperation
+public codes for cooperation
