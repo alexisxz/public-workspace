@@ -293,7 +293,7 @@ Para clonar o código na sua maquina tem que usar o caminho SSH
 
 Ferramentas git bash:
 1. git status - mostrar sobre o repositorio
-2. mv [arquivo] ./[folder]
+2. mv [arquivo] ./[folder] - mover arquivo para pasta
 3. git status - mostrando o status e vendo o que não esta adicionado
 4. git add [folder] [arquivo] [etc...] ou * - para adicionar
 5. git commit -m "escrever uma mensagem para ter o historico"
