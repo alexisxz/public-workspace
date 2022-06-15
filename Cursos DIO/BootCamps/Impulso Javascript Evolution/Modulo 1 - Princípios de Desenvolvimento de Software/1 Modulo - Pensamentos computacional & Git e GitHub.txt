@@ -337,8 +337,6 @@ Dinâmica:
 7. git push origin main - enviar todos os commits pra numver (github)
 8. git pull origin main - caso queira atualizar o repositório local
 
-Desafio:
-
 
 
 

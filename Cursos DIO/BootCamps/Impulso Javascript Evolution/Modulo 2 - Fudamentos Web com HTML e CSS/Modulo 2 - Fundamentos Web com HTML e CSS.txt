@@ -212,3 +212,125 @@ WYSIWYG - What you see what you get
 8. Construindo primeira aplicação
 
 1. Precisa de um servidor web - exemplo: XAMPP
+
+#############################################################
+INTRODUÇÃO A CRIAÇÃO DE WEBSTIES COM HTML5 E CSS3
+#############################################################
+
+1. Introdução a criação de websites com HTML5 e CSS3
+1.1 Estrutura básica
+-------------------------------------------------------------------------
+
+2. Entendendo o que é semântica
+2.1/2 Parte 1 e 2
+-------------------------------------------------------------------------
+
+3. Como usar textos e links em HTML
+3.1 Tags para textos: <p> paragrafo </p>
+--------------------------------------------------------------------------
+
+3.2 tags para links:
+<a>Link</a>
+<a href="linkedin.com/in/alexis_silva">Linkedin</a>
+<a href="malito:alexisxzinho@hotmail.com>E-mail</a>
+
+<a target="_blank">Link</a>
+--------------------------------------------------------------------------
+
+4. Como insetir imagens em seu site
+4.1 Tag img
+<img>
+<img src="img/avatar.jpg"
+<img alt="Foto de Alexis Matos">
+
+--------------------------------------------------------------------------
+
+5. Como organizar listas com HTML
+5.1 Tags li, ul e ol
+<ul> - a ordem não importa
+item 1
+item 2
+<ol> a ordem importa
+1. item 1
+2. item 3
+<li> - são os indices da lista
+--------------------------------------------------------------------------
+
+6. Introdução e conceitos básicos do CSS3
+6.1 Introdução ao CSS3
+
+Objetivos:
+O que são seletores
+Conceitos báiscos
+Principais seletores
+
+Regra:
+a, p, h1, h3{
+	color: blue;
+	font-size: 14px;
+}
+
+ID x Class:
+O ID só pode usar uma vez na página
+ID - #header
+Classs - .header
+--------------------------------------------------------------------------
+
+6.2 Conceitos básicos
+
+Tipos:
+Box model: Content - Padding (espaçamento entre borda e conteúdo) - border (circula a borda do conteúdo) - margin (o espaçamento entre elementos)
+--------------------------------------------------------------------------
+
+7. Estilizando elementos, textos e listas
+7.1 Estilizando elementos
+
+1. Box Model
+ - padding: topAndBottom rightLeft |top right bottom left
+1.1. Background
+ - background-color: green;
+ - background-image: url("bg.png")
+ - background-position: top;
+1.2. Border
+ - largura: pixel, centímetros, milímetros
+ - cor: blue, #0000ff
+ - Estilo: solid, dotted, dashed
+ - border: 3px solid blue
+ - border-radius: 10px or 10%
+---------------------------------------------------------------------------
+
+7.2 Estilizando textos
+
+1. font-family: Verdana [fonte inicial], Arial [backup];
+2. font-size: 10px
+3. font-style: normal [padrão] | italic
+4. font-weight: normal [padrão] | bold
+5. text-frensform: uppercase | lowercase | capitalize
+6. text-decoration: underline | overline | line-through
+
+---------------------------------------------------------------------------
+
+7.3 Estilizando elementos, textos e listas
+
+1. list-style-type
+ - ul { list-style-type: square; } - quadrados
+ - ol { list-style-type: upper-roman; } - em números romanos
+ - ul { list-style-type: "/1F44D" } - icons
+2. list-style-image
+ - ul { list-style-image: url("rocket.png"); } - alterar por imagem
+---------------------------------------------------------------------------
+
+7.4 Propriedades de dimensões e alinhamento
+
+
+
+1. Widht - Altura
+2. Height - Largura
+3. Max-width
+4. Max-height
+5. Margin
+6. Text align
+
+#############################################################
+Posicionando elementos com Flexbox em CSS
+#############################################################
