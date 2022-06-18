@@ -1,5 +1,5 @@
 # publich-workspace
-## public codes for cooperation
+## learning folders
 
 ### LPs+:
  - Git & GitHub
