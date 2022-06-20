@@ -372,4 +372,12 @@ Propriedades:
 			: center; stretch; flex-start; flex-end; space-between; space-around
 ----------------------------------------------------------------------------
 
-2.2 Fundamentos do Flexbox Pt.2 - Flex Items
+3.
+3.2 Fundamentos do Flexbox Pt.2 - Flex Items
+.flex-grow - Define a proporcionalidade de crescimentos dos itens
+.flex-basis - Estabelece o tamanho inicial do item antes da distruibuição do espaço
+.flex-shrink - Estabelece a redução ou compressão do tamanho de um item
+.flex - Atalho para: grow, shrink e basis
+.order - ordena os items
+.align-self - alinhamento individual sobre um determinado item
+		:auto (padrão); flex-start; flex-end; center; stretch (mesmo espaço pra todos); baseline
