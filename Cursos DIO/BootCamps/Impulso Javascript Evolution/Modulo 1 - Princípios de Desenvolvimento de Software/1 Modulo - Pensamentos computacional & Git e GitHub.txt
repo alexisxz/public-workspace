@@ -313,8 +313,8 @@ Ferramentas:
 inicializando no github:
 1. criar o repositorio no git
 2. git remote add origin git@github.com:alexisxz/livro-receitas.git - depois que criar o repositório passar a origina:
-3. git remote -v - checar os diretorios cadastrados
-4. git push origin master - enviar o repositório local da sua maquina para o remoto do github
+4. git remote -v - checar os diretorios cadastrados
+5. git push origin master - enviar o repositório local da sua maquina para o remoto do github
 ----------------------------------------------------------------------
 7. Resolvendo conflitos
 7.1 Como os conflitos acontecem no GitHub e como resolvê-los
@@ -336,6 +336,18 @@ Dinâmica:
 6. git status - para ver se esta faltando algo
 7. git push origin main - enviar todos os commits pra numver (github)
 8. git pull origin main - caso queira atualizar o repositório local
+
+#############################################################
+ENVIANDO UMA PASTA PRO GIT
+#############################################################
+1. criar repositório no git sem README.md
+2. git init
+3. git add *
+4. git commit -m "first commit"
+5. git branch -M main
+6. git remote add origin [URL do repositório]
+7. git push -u origin main
+
 
 
 
