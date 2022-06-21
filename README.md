@@ -1,10 +1,15 @@
 # publich-workspace
+
 ## learning folders
 
-### LPs+:
- - Git & GitHub
- - HTML5 & CSS3
+### LPs and more+
 
-### Links:
- - [Comprimir imagem](https://tinypng.com/)
- - [Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+- Git & GitHub
+- HTML5 & CSS3
+- VSCode
+- JavaScript
+
+### Links
+
+- [Comprimir imagem](https://tinypng.com/)
+- [Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
