@@ -1,3 +1,32 @@
 #############################################################
-IDE instalação e configuração (VSCode)
+Introdução ao JavaScript
 #############################################################
+1. O que é JavaScript
+1.2 História, Evolução e Aplicações
+- Interpretada - rodando em tempo real
+- Baseada em Protótipos
+- Multiparadigma
+- Comumente utilizada em Aplicações web client-side
+- Segue o padrão ECMAScript - Um padrão para varias linguagens, um conjunto de normas que vai dizer quais funcionalidades é lançada naquelas linguagens
+
+Aplicações:
+1. web
+2. Mobile
+3. Smartwatches
+4. Games
+5. Internet of Things
+6. APIs
+----------------------------------------------------------------
+4. JavaScript em uma página da web
+4.3 DOM (Document Object Model) - Estrutura dos elementos dentro da janela (As vezes chamados de arvore DOM)
+-----------------------------------------------------------------
+
+6. Mercado de Trabalho
+6.1 Frameworks e bibliotecas
+1. VueJS
+2. React
+3. Angular
+4. JQuery
+
+6.2 Mercado
+

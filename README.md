@@ -13,3 +13,5 @@
 
 - [Comprimir imagem](https://tinypng.com/)
 - [Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+- [Métodos] (https://www.w3.org/)
+- [Fórum] (https://stackoverflow.com/)
