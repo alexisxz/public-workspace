@@ -30,3 +30,84 @@ Aplicações:
 
 6.2 Mercado
 
+#############################################################
+Sintaxe Básica em JavaScript
+#############################################################
+2. O que danado é JavaScript?
+2.1 O que é?
+Uma linguagem de alto nível ( que é mais entendido pelas pessoas) \ baixo nível é de baixo nível (Entendido mais pelas máquinas)
+--------------------------------------------------------------
+
+3. Entendendo variáveis e seus valores
+3.2 Entendendo variáveis e seus valores
+1. Tipagem? Regra de uso de dados, quanto mais forte for a tipagem, mais obrigatório é a declaração do tipo de dado - JavaScript é uma tipagem fraca
+
+2. O que são variáveis? São dados que variam, que se declara de 3 formas:
+var = escopo global e local, pode ter seu valor alterado.
+let = escopo local de bloco, pode ter seu valor alterado.
+const = escopo local de bloco, somente leitura, valor inalterável
+
+3. Escopo:
+global = quando a variável é declarada fora de qualquer bloco, sua visibilidade fica disponível em todo o código
+local = quando a variável é declarada dentro de um bloco, sua visibilidade pode ficar disponível ou não.
+
+. Atribuição - dada pelo sinal "="
+. Igual (comparando o valor) - dada pelo sinal "=="
+. comparação idêntica (comparando valor e tipo) - dada pelo sinal "==="
+
+4. Operadores lógicos
+1. && - "e" - considera que todos os valores sejam true;
+2. || - "ou" - considera que qualquer valor seja true;
+3. ! - "não" - inverte o valor de true para false ou vice-versa;
+----------------------------------------------------------------------
+
+5. Vetores e Objetos
+1. Vetores ou arrays
+. arrays = lista, ou matriz de variáveis, onde cada variável possui um índice = let array = [st1, st2, false, true, 2];
+
+2. Manipulando arrays
+forEach() - itera um array;
+push() = add item no final do array;
+pop() = remove item no final do array;
+shift() = remove item no início do array;
+unshift() = add item no início do array;
+indexOf() = retorna o índice de um valor;
+splice() = remove ou substitui um item pelo índice;
+slice() = retorna uma parte de um array já existente
+
+3. Objetos - Dados que possuem propriedades e valores que definem suas características. deve ser declarado entre chaves "{}"
+var xicara = {cor:'azul', tamanha:'p', funcao: tomarCafe()}
+-----------------------------------------------------------------------
+
+5. Estruturas condicionais
+5.1 Estruturas - Instruções para realizar uma determinada tarefa a partir de uma condição
+
+1. Estrutura de decisão - if
+
+2. if ternário - [condição] ? [instrução1]:[instrução2];
+
+3. switch/case - funciona como uma estrutura condicional também
+
+4. Laços de repetição: repetição até atingir determinada condição
+for
+for/in
+for/of
+while
+do/while
+-------------------------------------------------------------------------
+
+6. Funções e suas particularidades
+O que é função? são blocos de comandos e instruções para a execução de determinadas tarefas
+
+Como declarar?
+() - Indica que é um objeto do tipo function;
+{} - Indica que é um bloco de instrução;
+
+1. com parâmetros = function nomeDaFuncao(paramentro){${instrucao};}
+
+6.1 tipos de Funções
+1. declarativas = function nomeDaFuncao (){${instrucao};}
+2 expressões (variaveis que recebem uma função) = var funcao = function nomeDaFuncao(){${instrucao};}
+3. arrow (variaveis que recebem uma função anonima)= var funcao = () =>{${instrucao};}
+
+2. funções aritméticas
