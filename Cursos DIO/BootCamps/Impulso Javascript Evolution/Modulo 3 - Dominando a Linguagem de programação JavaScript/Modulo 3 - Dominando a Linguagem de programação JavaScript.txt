@@ -110,4 +110,15 @@ Como declarar?
 2 expressões (variaveis que recebem uma função) = var funcao = function nomeDaFuncao(){${instrucao};}
 3. arrow (variaveis que recebem uma função anonima)= var funcao = () =>{${instrucao};}
 
-2. funções aritméticas
+#############################################################
+Sintaxe e Operadores
+#############################################################
+1. Operadores
+
+Tipos de Operadores (principais):
+1. Atribuição (=, +=, *=, /=, %=)
+2. Aritimética (+, -, *, **, /, %, ++, --)
+3. Comparação (==, ===, !=, !==, >, <, >=, <=)
+4. Lógica (&&, ||, !)
+5. Condicional: if ternário
+    condition ? expressionTrue : expressionFalse
