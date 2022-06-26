@@ -189,4 +189,267 @@ null = você declara um tipo com valor nulo (sem importancia)
 undefined = você não declara nem tipo nem valor
 -------------------------------------------------------------------------
 
-3. Atividades práticas
+#############################################################
+Funções
+#############################################################
+1.2 Estrutura e função anônima
+funtion nome(parametros) {
+    instruções
+    return (pode ser usado ou não);
+}
+
+.Função anônima - funções que representam expressões | criar variaveis com funções
+const soma = function (a,b) {
+    return a + b;
+}
+
+.função autoinvocável e callback - IIFE (immediatelly invoked function expression) - uma função anônima entre parênteses, seguida por outro par de parênteses, que representa sua chamada.
+(
+    function() {
+        let name = "Digita aqui"
+        return name;
+    }
+)();
+
+.Callbacks - uma função passado como argumento para outra
+const calc = function(operacao, num1, num2) {
+    return operacao(num1, num2);
+}
+const soma = function(num1, num2) {
+    return num1 + num2;
+}
+const sub = function(num1, num2) {
+    return num1 - num2;
+}
+
+const resultSoma = calc(soma, 1, 2);
+const resultSub = calc(sub, 1,2);
+--------------------------------------------------------------------
+
+2. parâmetros
+2.2 Arrays e Objetos
+1. spread: é os "..." ele dividi os valores para os paramêtros
+function sum (x, y, z) {
+    return x + y + z;
+}
+const numbers = [1, 2, 3];
+console.log(sum(...numbers));
+----------------------------------------------------------------------
+
+3.Loops
+3.1 if/else e switch
+//switch
+funtion getAnimal(id) {
+    switch(id) {
+        case 1:
+            return "cão";
+        case 2:
+            return: "gato";
+        case 3:
+            return: "pássaro";
+        default:
+            return: "peixe";
+    }
+}
+getAnimal(1) // cão
+getAnimal(4) // peixe
+getAnimal('leão') // peixe
+-------------------------------------------------------------------------
+
+3.2 For e While
+1. For
+// for
+function multiplicaPorDois (arr) {
+    let multiplicados = [];
+
+    for(let i = 0; i < arr.length; i++) {
+        multiplicados.push(arr[i] * 2);
+    }
+
+    return multiplicados;
+}
+
+const meuNumeros = [2, 33, 456, 356, 40];
+multiplicaPorDois(meuNumeros);
+
+// for ir - utilizado para objetos
+function forInExemplo(obj) {
+    for (prop in obj) {
+        console.log(prop)
+    }
+}
+const meuObjeto = {
+    nome: "Jão",
+    idade: "20",
+    cidade: "Salvador"
+}
+forInExemplo(meuObjeto);
+
+// for of - loop entre interáveis (arrays, strings)
+function logLetras(palavra) {
+    for(letra of palavra) {
+        console.log(letra)
+    }
+}
+const palavra = "abacaxi";
+logLetras(palavras)
+
+2. While
+function exemploWhile () {
+    let num = 0
+
+    while (num <=5) {
+        console.log(num);
+        num++;
+    }
+}
+exemploWhile()
+
+//Do while - ele executa pelo menos 1 vez, mesmo se condição for funcionalidades
+function exemploDoWhile() {
+    let num = 6
+    do {
+        console.log(num);
+        num++;
+    } while(num <= 5)
+}
+
+exemploDoWhile()
+-----------------------------------------------------------------------
+
+4. This
+4.1 O que é?
+Uma referência de contexto.
+
+const pessoa = {
+    firstName: "André",
+    lastName : "Soares",
+    id: 1,
+    fullName: function() {
+        return this.firstName + " " + this.lastName;
+    },
+}
+pessoa.fullName(); // André Soares
+
+This: o que é?
+contexto                    Referência
+Em um objeto(método)        Próprio objeto dono do método
+Sozinha                     Objeto global (em navegadores, window)
+Função                      Objeto global
+Evento                      Elemento que recebeu o evento
+
+4.2 Manipulando o seu valor
+1. Call
+const pessoa = {
+    nome: 'Miguel',
+};
+const animal = {
+    nome:'Murphy',
+};
+function getSomething() {
+    console.log(this.nome);
+}
+
+getSomething.call(pessoa); // Miguel
+getSomething.call(animal); // Murphy
+
+aula completa: https://web.dio.me/course/funcoes/learning/8b713d82-f56e-4cde-b10d-8552a0eac233?back=/track/impulso-javascript-evolution&tab=undefined&moduleId=undefined
+
+2.Apply
+const pessoa = {
+    nome: 'Miguel',
+};
+const animal = {
+    nome:'Murphy',
+};
+function getSomething() {
+    console.log(this.nome);
+}
+getSomething.apply(pessoa); // Miguel
+getSomething.apply(animal); // Murphy
+
+3. Bind - vai clonar a estrutura e passar o valor do objeto como parametro
+---------------------------------------------------------------------
+
+5. Arrow functions
+5.1 Sintaxe e outras restrições
+de:
+const helloWorld = function() {
+    return "hello world";
+}
+melhorado:
+const hello = () => {
+    return "Hello World";
+}
+para:
+const helloWorld = () => "Hello World";
+
+1. Sintaxe
+const soma = (a, b) => a + b;
+
+const soma = a => a;
+
+. RESTRIÇÕES:
+* NÃO FAZ HOISTING!!!!
+* THIS, SEMPRE SERÁ DO OBJETO GLOBA, MÉTODOS PARA MODIFICAR SEU VALOR NÃO IRÃO FUNCIONAR
+* NÃO EXISTE O OBJETO "ARGUMENTS"
+* O CONSTRUTUR (EX: neu MeuObjeto()) TAMBÉM NÃO PODE SER UTILIZADO.
+
+#############################################################
+Debugging e Erroe Handling
+#############################################################
+1. Tipos de erros
+1.2 ECMAScript Error e DOMException
+1. ECMAScript
+Erros que ocorrem em tempo de execução
+
+2. DOMException (error do DOM (document object model));
+Relacionado ao código na página da web
+---------------------------------------------------------------------
+
+2. Tratando erros
+2.1 Throw, Try/Catch e Finally
+1. Throw - Ele vai retornar o erro como erro e mostrará todas as propriedades dos erros
+function verificar Palindromo (string) {
+    if (!string) throw(ao inves de return) "String inválida"; // Uncaught: String inválida
+}
+
+2. Try...catch - verificar se tem algum erro e pega-lo e trata-lo como quiser
+function verificarPalindromo(string) {
+    if (!string) throw "String inválida";
+    return string === string.split(''),reverse().join('');
+}
+function tryCatchExemplo(string) {
+    try {
+        verificarPalindromo(string)
+    }
+    catch(e) {
+        console.log(e) ou throw e; (para colocar melhores estatisticas)
+    }
+}
+
+tryCatchExemplo('');
+
+3. Finally - irá executar alguma ação depois do erro
+function verificarPalindromo(string) {
+    if (!string) throw "String inválida";
+    return string === string.split(''),reverse().join('');
+}
+function tryCatchExemplo(string) {
+    try {
+        verificarPalindromo(string);
+    }
+    catch(e) {
+        throw e;
+    }
+    finally {
+        console.log('A string enviada foi: ' + string);
+    }
+}
+-------------------------------------------------------------------------
+
+3. Criando erros
+3.1 O objeto error - 
+new Error(message, fileName, lineNumber)
+const MeuErro = new Error('Mensagem Inválida');
+throw MeuErro;
