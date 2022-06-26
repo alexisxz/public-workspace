@@ -394,6 +394,7 @@ const soma = a => a;
 * THIS, SEMPRE SERÁ DO OBJETO GLOBA, MÉTODOS PARA MODIFICAR SEU VALOR NÃO IRÃO FUNCIONAR
 * NÃO EXISTE O OBJETO "ARGUMENTS"
 * O CONSTRUTUR (EX: neu MeuObjeto()) TAMBÉM NÃO PODE SER UTILIZADO.
+-----------------------------------------------------------------------
 
 #############################################################
 Debugging e Erroe Handling
@@ -453,3 +454,50 @@ function tryCatchExemplo(string) {
 new Error(message, fileName, lineNumber)
 const MeuErro = new Error('Mensagem Inválida');
 throw MeuErro;
+-------------------------------------------------------------------------
+
+#############################################################
+Manipulando a D.O.M com javaScript
+#############################################################
+1. Entendendo o D.O.M.
+1.2 O que é?
+Document Object Model - O DOM HTML é um padrão de como acessar e modificar os elementos HTML de uma página.
+
+1.3 Diferença entre BOM (Browser Object Model) - Tudo o que está dentro do objeto window, o DOM está dentro do BOM
+-------------------------------------------------------------------------
+
+2. Selecionando elementos
+1. Estrutura:
+ - tag <body>
+ - id - um atributo, único para o elemento
+ - classe - identificar não único
+
+const meuElemento = document.getElementById("meu-elemento");
+meuElemento.classList.add("novo-estilo");
+meuElemento.classList.remove("classe");
+meuElemento.classList.toggle("dark-mode");
+meuElemento.style.color = "blue";
+ ------------------------------------------------------------------------
+
+4. Eventos
+mouseover, mouseout - entrando e saindo no elemento
+click, dbclik - eventos de clique
+Change, load - eventos de atualização
+
+1. acionando eventos
+const botao = document.getElementById("meuBotao")
+botao.AddEventListener("click", outraFuncao)
+
+or on HTML
+
+<h1 onclick="mudaText(this)">Clique aqui! </h1>
+<script>
+    function mudaTexto(id) {
+        id.innerHTML = "Mudei!";
+    }
+</script>
+------------------------------------------------------------------------
+
+#############################################################
+Javascript Assíncrono
+#############################################################
