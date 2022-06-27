@@ -608,7 +608,7 @@ Introdução ao TypeScript: Explorando Classes, Tipos e Interfaces
 1. criando o arquivo index.ts e executando o comando parcel
 Passo a passo:
 1. Na pasta inicializar o comando: npm init
-2. Na pasta dar o comando: npm i parcel-bundler
+2. Na pasta dar o comando: npm i parcel-bundler - para poder compilar o código
 3. criar a index.html - 
 
 
