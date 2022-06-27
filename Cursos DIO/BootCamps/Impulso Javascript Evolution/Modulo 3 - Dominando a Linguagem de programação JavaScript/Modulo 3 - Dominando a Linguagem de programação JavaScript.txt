@@ -660,3 +660,77 @@ adicionaApendiceALista(['a', 'b', 'c'], 'd');
 -------------------------------------------------------------------------
 
 8. Desenvolvendo condicionais a partir de parâmetros
+interface IUsuario {
+    id: string;
+    email: string;
+}
+
+interface IAdmin extends IUsuario {
+    cargo: 'gerente' | 'coordenador' | 'supervisor';
+}
+
+function redirecione(usuario: IUsuario | IAdmin) {
+    if ('cargo' in usuario) {
+        // redirecionar para a area de adminstração
+    }
+
+    // redireciono para a area do usuário
+}
+------------------------------------------------------------------------
+
+9. Utilizando o caracter "?" para variáveis opcionais
+interface IUsuario {
+    id: string;
+    email: string;
+    cargo?: 'gerente' | 'coordenador' | 'supervisor' | 'funcionario';
+}
+
+function redirecione(usuario: IUsuario) {
+    if (usuario.cargo) {
+        // redirecionar(usuario, cargo);
+    }
+
+    // redirecionar para a area do usuário
+}
+-------------------------------------------------------------------------
+
+10. Criando variáveis com propriedade redonly e private
+interface ICachorro {
+    nome: string;
+    idade: number;
+    parqueFavorito?: string;
+}
+
+type CachorroSomenteLeitura = {
+    +readonly [K in keyof ICachorro]-?: ICachorro[K];
+}
+
+class MeuCachorro implements CachorroSomenteLeitura {
+    nome;
+    idade;
+    parqueFavorito;
+
+    constructor(nome, idade) {
+        this.nome = nome;
+        this.idade = idade;
+    }
+}
+
+const cao = new MeuCachorro('Apolo', 14);
+-------------------------------------------------------------------------
+
+12. Exemplo de como usar Omit e conslusão do curso
+interface IPessoa {
+    nome: string;
+    idade: number;
+    nacionalidade: string;
+}
+
+interface IBrasileiro extends Omit<IPessoa, 'nacionalidade'> {
+
+}
+
+const brasileiro: IBrasileiro = {
+    nome: 'Alexis',
+    idade: 26,
+}

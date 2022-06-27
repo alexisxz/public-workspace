@@ -1,7 +1,14 @@
-// Generic types
-
-function adicionaApendiceALista<T>(array: T[], valor: T) {
-    return array.map(() => valor);
+interface IPessoa {
+    nome: string;
+    idade: number;
+    nacionalidade: string;
 }
 
-adicionaApendiceALista(['a', 'b', 'c'], 'd'); 
+interface IBrasileiro extends Omit<IPessoa, 'nacionalidade'> {
+
+}
+
+const brasileiro: IBrasileiro = {
+    nome: 'Alexis',
+    idade: 26,
+}
