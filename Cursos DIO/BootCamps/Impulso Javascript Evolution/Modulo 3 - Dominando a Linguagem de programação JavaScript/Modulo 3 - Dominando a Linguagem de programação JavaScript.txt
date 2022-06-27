@@ -540,3 +540,100 @@ fetch('htts...', {
 })
     .then(response => response.json())
     .then(json => console.log(json))
+------------------------------------------------------------------------
+
+#############################################################
+Javascript Assíncrono
+#############################################################
+1. Paradigmas e Pilares
+1.2 Paradigmas
+Dois paradigmas: Imperative(procedural, object oriented, parallel processing) e declarative (logic, functional, dataflow, database)
+
+2.2 Pilares:
+Abstração - Cada vez tornar o objeto mais simples, generalizando
+Herança - O objeto filho herda propriedades e métodos do objeto pai
+Encapsulamento - Cada classe tem propriedades e métodos independentes do restante do código.
+Polimorfismo - Objeto herdar a mesma classe pai, mas se comportarem de forma diferente quando invocamos seus métodos
+-------------------------------------------------------------------------
+
+2. Orientação a Objetos em JavaScript (OOJS)
+2.1 Protótiops e Classes
+1. Protótipos: é o esqueleto de todos os objetos, é o que está no topo da cadeia.
+
+2. Classes: uma sintaxe feita para facilitar a escrita (sintaxe sugar))
+class Meal {
+    constructor (food) {
+        this.food = food
+    }
+
+    eat() {
+        return '♥'
+    }
+}
+OBS. Javascript não possui classes nativamente. Todas as classes são objetos e a herança se dá por protótipos.
+class Animal {
+    constructor(type = 'animal') {
+        this.type = type
+    }
+    get type() {
+        return this._type
+    }
+    set type(val) {
+        this._type = val.toUpperCase()
+    }
+    makeSound() {
+        console.log('Making animal sound')
+    }
+}
+let a = new Aniaml()
+console.log(a.type) //ANIMAL
+
+class Cat extends Animal {
+    constructor(){
+        super('car')
+    }
+
+    makeSound() {
+        super.makeSound()
+        console.log('Meow')
+    }
+}
+let b= new Cat()
+console.log(b.type) // CAT
+-------------------------------------------------------------------------
+
+#############################################################
+Introdução ao TypeScript: Explorando Classes, Tipos e Interfaces
+#############################################################
+1. criando o arquivo index.ts e executando o comando parcel
+Passo a passo:
+1. Na pasta inicializar o comando: npm init
+2. Na pasta dar o comando: npm i parcel-bundler
+3. criar a index.html - 
+
+
+// types
+// interfaces
+
+interface IAnimal {
+    nome: string;
+    tipo: 'terreste' | 'aquático';
+    domestico: boolean;
+}
+
+interface IFelino extends IAnimal {
+    visaoNoturna: boolean;
+}
+
+interface ICanino extends IAnimal {
+    porte: 'pequeno' | 'médio' | 'grande';
+}
+
+type IDomestico = IFelino | ICanino;
+
+const animal: IDomestico = {
+    domestico: true,
+    nome: 'cachorro',
+    porte: 'médio',
+    tipo: 'terreste',
+}
