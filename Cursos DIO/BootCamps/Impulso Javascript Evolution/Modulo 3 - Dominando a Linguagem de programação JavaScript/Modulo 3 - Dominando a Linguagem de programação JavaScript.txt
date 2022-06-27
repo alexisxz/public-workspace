@@ -609,7 +609,9 @@ Introdução ao TypeScript: Explorando Classes, Tipos e Interfaces
 Passo a passo:
 1. Na pasta inicializar o comando: npm init
 2. Na pasta dar o comando: npm i parcel-bundler - para poder compilar o código
-3. criar a index.html - 
+3. criar a index.html
+4. criar o index.ts 
+5. colocar o index.ts no script no index.html
 
 
 // types
@@ -637,3 +639,24 @@ const animal: IDomestico = {
     porte: 'médio',
     tipo: 'terreste',
 }
+-------------------------------------------------------------------------
+
+6. Tratando a tag input
+const input = document.getElementById('input') as HTMLInputElement;
+
+input.addEventListener('input', (event) => {
+    const i = event.currentTarget as HTMLInputElement;
+});
+-------------------------------------------------------------------------
+
+7. Generic types
+// Generic types, o T no diamante é colocado como padrão quando vc não sabe
+
+function adicionaApendiceALista<T>(array: T[], valor: T) {
+    return array.map(() => valor);
+}
+
+adicionaApendiceALista(['a', 'b', 'c'], 'd'); 
+-------------------------------------------------------------------------
+
+8. Desenvolvendo condicionais a partir de parâmetros
