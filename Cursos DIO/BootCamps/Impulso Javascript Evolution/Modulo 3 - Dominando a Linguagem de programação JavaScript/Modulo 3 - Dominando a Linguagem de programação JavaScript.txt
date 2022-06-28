@@ -753,4 +753,7 @@ Introdução Prática ao TypeScript
 3. Compila um JavasScript mais resiliente
 4. Ajuda a desenvolver boas práticas de programação.
 
-Passos a passos no cadastro da pasta
+4. Passos a passos no cadastro da pasta
+1. no terminal da pasta inicializar o node: npm init
+2. instalar o typescript como dependecia da pasta: npm install --save-dev typescript
+3. instalar o lite-server, uma bibilioteca que vai procurar o arquivo html e ajudar a implementar as outras bibliotecas dentro: npm install lite-server
