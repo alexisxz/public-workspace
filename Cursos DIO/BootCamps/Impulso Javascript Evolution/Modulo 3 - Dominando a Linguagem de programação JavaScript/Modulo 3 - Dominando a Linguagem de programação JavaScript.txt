@@ -605,6 +605,8 @@ console.log(b.type) // CAT
 #############################################################
 Introdução ao TypeScript: Explorando Classes, Tipos e Interfaces
 #############################################################
+O que é? É uma extensão do JavaScript, possuindo features não nativas do JavaScript, como por exemplo checagem de tipos, que facilitam e aceleram o desenvolvimento de sistemas.
+
 1. criando o arquivo index.ts e executando o comando parcel
 Passo a passo:
 1. Na pasta inicializar o comando: npm init
@@ -734,3 +736,21 @@ const brasileiro: IBrasileiro = {
     nome: 'Alexis',
     idade: 26,
 }
+-------------------------------------------------------------------------
+
+#############################################################
+Introdução Prática ao TypeScript
+#############################################################
+3. O que é?
+1. Superset do JavaScript
+. Linguagem construída por cima do JS;
+. Adiciona features à linguagem original;
+. Compila para JS.
+2. Adiciona definição estática de tipos
+. Funcionalidades do código mais explícitas;
+. Maior segurança durante o desenvolvimento;
+. Detecta erros durante a compilação que só seriam percebidos em execução;
+3. Compila um JavasScript mais resiliente
+4. Ajuda a desenvolver boas práticas de programação.
+
+Passos a passos no cadastro da pasta
