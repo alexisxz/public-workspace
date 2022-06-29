@@ -8,6 +8,7 @@
 - HTML5 & CSS3
 - VSCode
 - JavaScript
+- Node.js
 - TypeScript
 
 ### Links

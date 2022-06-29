@@ -752,8 +752,94 @@ Introdução Prática ao TypeScript
 . Detecta erros durante a compilação que só seriam percebidos em execução;
 3. Compila um JavasScript mais resiliente
 4. Ajuda a desenvolver boas práticas de programação.
-
+-----------------------------------------------------------------------
+########## PASSO A PASSO INSTALAÇÃO ##################
 4. Passos a passos no cadastro da pasta
 1. no terminal da pasta inicializar o node: npm init
-2. instalar o typescript como dependecia da pasta: npm install --save-dev typescript
+2. instalar o typescript como dependecia da pasta: npm install typescript --save-dev
 3. instalar o lite-server, uma bibilioteca que vai procurar o arquivo html e ajudar a implementar as outras bibliotecas dentro: npm install lite-server
+4. criar o index.html
+-------------------------------------------------------------------------
+
+9. Lidando com objeto, enum e interface
+1. Objeto - recebe varios parametros
+2. enum - recebe varios tipos
+3. interface - cria uma interface de valores
+-------------------------------------------------------------------------
+
+10. variavel tipo any: você consegue colocar qualquer typeof
+-------------------------------------------------------------------------
+
+11. Definição de tipos de variáveis personalizados
+1. type - te da as variaveis de tipo:
+type input = number | string;
+-------------------------------------------------------------------------
+
+12. Definindo o tipo de retorno de uma função
+1. definir o tipo da função também:
+function somarValoresNumericos(num1: number, num2: number): number {
+    return num1 + num2;
+}
+------------------------------------------------------------------------
+
+13. Quando usar o tipo void em funções
+1. quando você quer que a função não retorne nada
+function printaValoresNumericos(num1: number, num2: number): void {
+    console.log(num1 + num2);
+}
+-------------------------------------------------------------------------
+
+14. incluindo callback em funções
+function somarValoresNumericosETratar(num1: number, num2: number, callback: (num: number) => number): number {
+    let resultado = num1 + num2;
+    return callback(resultado);
+}
+
+function aoQuadrado(num: number): number {
+    return num * num;
+}
+
+function dividirPorEleMesmo(num: number): number {
+    return num / num;
+}
+
+console.log(somarValoresNumericosETratar(1, 3, aoQuadrado));
+console.log(somarValoresNumericosETratar(1, 3, dividirPorEleMesmo));
+-------------------------------------------------------------------------
+
+15. Any está de volta e sobre unknown
+unknown é diferente, você não consegue alocar o valor em outra propriedade sem validação.
+
+-------------------------------------------------------------------------
+
+16. Como funciona o tipo never e o comando throw
+never: um código que nunca será executado depois.
+throw: lança um erro, acaba com a função
+function jogaErro(erro: string, codigo: number): never {
+    throw { error: erro, code: codigo }
+}
+-------------------------------------------------------------------------
+17. tsconfig.json - target
+da para você configurar para outras versões usando código atual
+-------------------------------------------------------------------------
+
+18. tsconfig.json - lib
+é onde vc traz as bibliotecas para rodar os códigos
+-------------------------------------------------------------------------
+
+19. tsconfig.json - outDir e rootDir
+OutDir - para guardar o código js em uma pasta padrão
+rootDir - onde fica as pastas com código ts parar compilar na pasta outDir e no final tem o include e exclude - o que quer colocar ou tirar
+-------------------------------------------------------------------------
+
+20. tsconfig.json - noImplicitAny e strickNullChecks
+strickNullChecks - ele vai ignorar os valores nulos
+noImplicitAny - você consegue passar os valores como any, que ele irá aceitar
+-------------------------------------------------------------------------
+
+21. revisão tsconfig.json
+
+
+
+
+
