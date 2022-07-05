@@ -1,0 +1,227 @@
+#############################################################
+Conhecendo os Principais Protocolos de Comunicação da Internet
+#############################################################
+2. Protocolo de comunicação Web http
+2.1 Como funciona o protocolo HTTP?
+HyperText Transfer Protocol (HTTP)
+Protocolo de comunicação
+1. Browser - Implementa o cliente HTTP
+2. Servidor - host objetos web
+
+1. Cliente - Mensagens: Request HTTP - Objetos Web
+2. Servidor - Mensagens: Response HTTP - Protocolo TCP
+
+HTTP: Aplicação
+1. Protocolo HTTP com GET (Receber do servidor):
+1.1 HTTP Request:
+Get: https:www.amazon.com.br
+Host: amazon.com
+Connection: close
+User-agent: Mozilla/5.0
+1.2 HTTP Response:
+HTTP/1.1 200 OK
+Connection: close
+Date: Tue, 09 Aug 2011 15:44:04 GMT
+Server: Apache/2.2.3 (CentOS)
+Last-Modified: Tue, 09 Aug 2011 15:11:03 GMT
+Content-Lenght: 6821
+content-type: text/html
+(data... amazon initial page)
+
+2. Procolo HTTP com POST (Enviar para o servidor):
+2.1 HTTP Request:
+Post: https:www.amazon.com.br/cadastro
+Host: amazon.com
+Connection: close
+User-agent: Mozilla/5.0
+...
+Data: nome, data de nascimento, contato
+...
+2.2 HTTP Response:
+HTTP/1.1 200 OK
+Connection: close
+Date: Tue, 09 Aug 2011 15:44:04 GMT
+Server: Apache/2.2.3 (CentOS)
+Last-Modified: Tue, 09 Aug 2011 15:11:03 GMT
+Content-Lenght: 6821
+content-type: text/html
+(data... Update Succeed)
+
+3. Formatos de estruturação de dados: XML ou JSON - HTTP Entity Body
+Armazenamento - Transmissão - Reconstrução
+3.1 Request Header:
+Content-type:application/json
+Accept: application/json
+3.2 Extensible Markup Language (XML) - Objetivo: Serialization, Comunicação, Metadados
+3.3 javascript Object Notation (JSON) - Características: Lightweight, independente de ling., simples
+3.4 Comun entre os dois: Auto-descritivos, Hierárquicos, Independentes de linguagem de prog., vasta Utilização
+
+4. Por qual optar?
+Depende da tecnologia, complexidade, e os prós e contras para cada um
+
+TCT: APRESENTAÇÃO
+1. TCT (Transmission Control Protocol)
+TCP não persistente - A conexão é estabelecidade, recebe as informações e é fechada após receber a resposta.
+TCT persistente - A conexão não fecha, pois não recebe a resposta, ou as trocas são feitas simultâneas.
+------------------------------------------------------------------------
+
+2.2 Mensagens HTTP - Request & Response
+REQUEST LINE
+Get:/somedir/page.html(Método HTTP)HTTP/1.1(Versão)
+HEADER LINE
+Host: www.someschool.edu(URL)
+Connection: close (Tipo de conexão - Conexão não persistente)
+User-agent: Mozilla/5.0 (Agente)
+Accept-language: fr (Pref. do cliente à linguagem)
+
+Métodos:
+GET - Solicita um recurso do servidor
+HEAD - Get sem corpo de resposta
+POST - Submete uma entidade a um recurso
+PUT - Substituição de recursos pelos dados da requisição
+DELETE - Remoção de um recurso
+TRACE - Chamada de loop-back a um determinado recurso
+OPTION - Opções de comunicação com recurso
+CONNECT - Tunelamento identificado pelo recurso
+PATCH - Modificação parcial
+
+Metodos Seguros:
+GET, HEAD, OPTION = READ-ONLY
+
+RESPONSE
+STATUS LINE
+HTTP/1.1 200 OK
+HEADER LINES
+Connection: close
+Date: Tue, 09 Aug 2011 15:44:04 GMT
+Server: Apache/2.2.3 (CentOS)
+Last-Modified: Tue, 09 Aug 2011 15:11:03 GMT
+Content-Lenght: 6821
+content-type: text/html
+ENTITY BODY
+(data... Update Succeed)
+
+STATUS LINE, CODES OPTION:
+200 OK
+301 Moved Permanently
+400 Bad Request:
+404 Not found
+5005 HTTP Versionn Not Supported
+CLASSIFICAÇÃO:
+Information response (100 - 199)
+Sucessful response (200 - 299)
+Redirection response (300 - 399)
+Client error response (400 - 499)
+Server error response (500 - 599)
+
+HEADER LINES:
+WebDav (Web Distributed Authoring and Versioning)
+-------------------------------------------------------------------------
+
+2.3 Pra que serve os Cookies e Cache?
+Stateless (Não guarda informações)
+Cliente/Server (Troca sempre entre cliente e serve)
+
+1. Cookies: Se precisamos identificar o cliente
+TRACK - Pequenos pedaços ou blocos de dados criados e utilizados pelo servidor para persistir dados no dispositivo do cliente (RFC 6265)
+
+1.2 Onde estão? no HEADER FILE
+
+2. Tipos:
+Cookies de sessão: Apagados depois do acesso
+Cookies de persistentes: Ficam por algum tempo (exemplo a senha salva)
+
+3. Exemplos:
+Manter logins ativos, Informação de Websites, Carrinho de compras.
+
+4. LGPD é uma autorização para utilizar das suas informações
+
+2. Caching: Sempre que fizer uma requisição, vai ser checado se já tem as informações no proxy server, caso se ele ja tem ou precisa fazer um update, ele inicia uma nova conexão com o HTTP server, caso não, ele só envia.
+
+1. Vantagens: Redução do tempo de resposta, redução de tráfego.
+------------------------------------------------------------------------
+
+2.4 HTTP 2.0 - Atualizações do protocolo
+HOL - Head of Line Blocking (bloqueio de requisição até receber a resposta), no 2.0, você pode enviar varias solicitações com streams distintas.
+
+. Única conexão persistente
+. Compressão de Header
+. Server push (puxa tudo relacionado com aquela solicitação por metodo)
+. HTTPS por padrão - TLS
+. Negociação no handshake
+
+-------------------------------------------------------------------------
+
+2.5 Servidoes/Sistemas de Aplicação
+
+1. Os servidoes mais utilizados:
+1. APACHE: Servidor
+2. NGINX: Servidor
+3. XAMPP: UM pacote que utiliza o APACHE
+-------------------------------------------------------------------------
+
+3. HTTPS - O que muda no protocolo?
+3.1 Conceitos básicos de segurança da informação
+1. SLL (Protocolo) Conceitos báiscos: Criptografia por chave & Certificado digital
+
+2. Criptografia por chave
+1. Assiméticra:
+Chave privada - Assinatura - Criptografia
+Chave pública - Verificação de autenticidade
+2. Simétrica:
+Chave única privada - Conhecimento prévio da chave && Como transferir a chave?
+
+Cifra de César: Substituição da letra pela k-ésima do alfabeto Rotatividade do alfabeto, Exemplo:
+Bob, I love you. Alice -> Ere, I oryh brx. Dolfh
+
+3. Certificado digital, feitos por entidades certificadoras
+
+Padrões:
+IETF - Recomendação ITUX.509
+RFC 1422
+-------------------------------------------------------------------------
+
+3.2 Protocolo SSL - Secure Scoket Layer
+Segurança para conexões TCP
+
+1. Operações do SSL:
+3 Fases:
+Handshake
+Key Derivation
+Data Transfer
+
+Verificação de autenticidade por certificados digitais Porta 443
+
+2. LGPD / GDPR - General Data Protection Regulation - Legislação Europeia
+-------------------------------------------------------------------------
+
+4. Protocolo de comunicação WebSocket
+4.1 Contextualização - PORTA: 80 e 443
+Conexão bidirecional - Via API
+-------------------------------------------------------------------------
+
+4.2 Como funciona o WebSocket?
+JSON ONLY
+1. Origin-base security model
+2. Endereçamento e protocolo
+3. Camada -> enquadramento on top TCT
+4. Encerramento do handshake
+5. Campos SEC-...: No Edition
+6. Independente do TCP
+7. Interpretação do HTTP server
+8. Porta 443
+-------------------------------------------------------------------------
+
+4.3 Como ocorre a comunicação na internet?
+Proxy
+HTTP server
+DNS - Domain Name System
+Socket
+Load balancer = Distribuição de Carga, Multiplexação
+
+TCP/IP Model:
+Aplicação
+Transporte
+Rede
+Enlace
+
