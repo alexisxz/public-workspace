@@ -348,3 +348,192 @@ Manipular eventos em elementos React é muito semelhante a manipular eventos em 
 5. Identifique onde o state deve ficar
 6. Adicione o fluxo de dados inverso
 
+#############################################################
+Desenvolvimento de aplicações para internet com ReactJS
+#############################################################
+1. Trabalhando com estilos em elementos e componentes
+1.2 Aprenda sobre estilização de componentes e elementos CSS
+
+1. Maneiras de estilização:
+. Inline
+. Classes
+. CSS -> Melhor opção: npm istall --save styled-components
+-------------------------------------------------------------------------
+
+1.3 Stateful vs Stateless
+Stateful: usa estados; Possui gerenciamento de estados no compentens; Construídos usando classes em JS - Ciclo de vida: Initialization -> Mouting -> Updation -> Unmouting
+
+stateless: não usa estados; Não possui gerenciamento de estados no componentes; Construídos usando funções em JS
+-------------------------------------------------------------------------
+
+1.4 Formulário: Mantêm um estado interno
+
+1. Componente Controlado
+Tanto select, input ou textarea aceitam um atributo value
+Podemos mudar esse valor usando o atributo onChange
+
+2. Componente não-controlado
+A tag input é read-only
+
+3. Bibliotecas:
+Formit
+Redux-forms
+-------------------------------------------------------------------------
+
+2. Introdução ao Redux e fluxos da arquitetura com ReactJS
+2.1 O que é flux?
+É um padrão de projeto para tráfego de dados de maneira unidirecional:
+Action -> Dispatcher -> Store -> View
+. Action - É como um telégrafo: ele formata a mensagem a ser enviada
+. Dispatcher-  É como um telefonista; ele sabe todos os callbacks para diferentes stores.
+. Store - É como um gerente super controlador; Ele guarda a informação e todas as alterações têm que ser feitas por ele mesmo, mais ninguém.
+. View - É como um gerente intermediário (middleware) que recebe as notificações da store e passa os dados para as visões abaixo dela
+
+1. Implementações:
+Redux (mais popular)
+Reflux
+Mobx
+Vuex (baseado em Redux e Elm)
+NgRX/store (baseada em Redux e RXJS)
+
+2. Bibliotecas baseadas em Flux:
+Servem para comunicação entre componentes
+Centralizam a informação
+-------------------------------------------------------------------------
+
+2.2 Conheça o Redux e como trabalhar com ele
+React -> action -> store -> reducer -> store -> react
+
+1. 3 Princípios:
+. Single source of truth: Uma única store
+. Sate é read-only
+. Mudanças são feitas com pure functions
+
+2. Actions
+São como o do Flux
+Diferença: Actions não enviam a action em si para o dispatcher
+Retornam um objeto de action formatado
+
+3. Store
+Somete uma store, diferente do Flux que tem varios
+A Store aqui cuida de toda a árvore de estados
+Os reducers que cuidam de descobrir qual estado muda
+
+4. Reducers
+Em Redux não há dispatcher (simplifica e divide o trabalho da store)
+A Store se conecta ao root reducer, que divide os estados em pequenos reducers para descobrir como ligar com esse estado.
+Os estados aqui são imutáveis
+
+5. Views: Em react, adiciona na camada de view 3 novos conceitos para conectar a view à store
+1. Provider
+2. connect()
+3. selector 
+-------------------------------------------------------------------------
+
+3. Comunicação avançada entre aplicações
+3.2 Rest HTTP com React
+Fetch API:
+Nativa do browser
+Oferece uma alternativa ao XMLHttpRequest() e JQuery.ajax()
+Suporte e Service Workers
+Algumas diferenças:
+	Não envia nem recebe cookies(precisa definir a opção cedentials)
+	Não rejeita o status do erro HTTP
+
+1. Axios
+Lib de HTTP API
+Cross-browser
+Pode monitorar o progresso de um request
+Melhor tratamento de erros
+Melhor teste
+Instalação: yarn add axios
+-------------------------------------------------------------------------
+
+3.3 Imutabilidade e Redux
+Uma vez criada, uma coleção não pode ser alterada.
+Novas coleções podem ser criadas a partir de uma coleção anterior e uma mutação (stter) como um conjunto
+Novas coleções são criadas usando o máximo possível da estrutura original, reduzindo a cópia e aumentando a performance.
+
+1. Immutable.js:
+	Biblioteca que fornece coleções persistentes e imutáveis
+	Permite detecção barata de alterações nos objetos
+
+2. Imutabilidade é pré requisito no Redux
+Redux e React-Redux utilizam comparações rasas
+Manipulação de dados mais seguras
+Time-travel debugging
+-------------------------------------------------------------------------
+
+3.4 Redux + Rest
+- Suponha um sistema de notificações ou um sistema de logging
+- Você precisa manter a sincronia, independente da tela onde estiver
+- Uma maneira de resolver fácil seria armazenar os dados do serviço no Redux.
+
+1. Redux Middlewares
+- Provê uma camada entre o disparo de uma ação e o momento que ela atinge o reducer.
+- Utilizadas para uma variedade funções, entre elas chamadas de APIs de serviço
+Os mais usados: redux-thunk; redux-saga
+-------------------------------------------------------------------------
+
+4. Conceito aplicados a qualidade de código e automação de testes com React
+4.2 TDD e BDD com Jest
+
+1. O que é TDD (Test-Driven Development)
+- Antecipar erros a nível de desenvolvimento
+	Teste escrito antes da funcionalidade
+- Não descarta a presença de um tester
+
+. RED 1. Write a test that fails
+. GREEN 2.Make the code work
+. REFACTOR 3. Eliminate redundancy
+
+. Teste unitário
+. Teste End-to-End (E2E)
+
+Ferramentas:
+Jest
+React-testing-library
+Shallow
+Enzyme
+Chai
+Mocha
+Selenium
+Puppeteer
+
+Jest: Usa uma linguagem JavaScript: Jasmine (lingaguem de testes)
+
+react-testing-library: teste de componente
+
+2. O que é BDD (Behavior-Driven Development)
+- Teste de especificação
+	Une especificação, teste automatizado e premimssa de teste (documento de teste)
+
+Sintaxe Gherkin:
+Sintaxe de steps para definer cenários
+Descreve cada funcionalidade por feature (caso de uso)
+
+Blibiotecas mais utlizadas:
+Jest-cucumber: yarn add --dev jest-cucumber
+Chai
+-------------------------------------------------------------------------
+
+4.3 Debugging
+Depuração é o processo de encontrar e reduzir defeitos em um software
+
+1. Ferramentas:
+- Chrome Devtools
+- Redux Devtools
+- React Devtools
+-------------------------------------------------------------------------
+
+4.4 Tratamento de erros
+Resiliência de SW
+Segurança
+
+1. Tratamento em componentes
+- Em JS usamos PropTypes
+- Podemos usar linguagens tipadas como TypeScript, definindo interfaces.
+
+#############################################################
+Introdução aos React Hooks
+#############################################################

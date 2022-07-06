@@ -17,15 +17,20 @@
 - BabelJS
 - Webpack
 - ESlint
+- Redux
+- Jest
+- Jest-cucumber
 
 ### Links
 
-- [Comprimir imagem](https://tinypng.com/)
+- [Comp. IMG](https://tinypng.com/)
 - [Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
-- [Métodos] (https://www.w3.org/)
-- [Fórum] (https://stackoverflow.com/)
+- [Methods] (https://www.w3.org/)
+- [Forum] (https://stackoverflow.com/)
 - [Object error] (https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Error)
 - [TypeScript] (https://www.typescriptlang.org/)
 - [BabelJS] (https://babeljs.io/)
 - [Webpak] (https://webpack.js.org/)
 - [ESlint] (https://eslint.org/)
+- [Jest] (https://jestjs.io/)
+- [Cucumber] (https://cucumber.io/)
