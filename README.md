@@ -12,7 +12,7 @@
 - TypeScript
 - XML & JSON
 - HTTP & SSL & WebSocket
-- ReactJS
+- ReactJS (JSX)
 
 ### Links
 
