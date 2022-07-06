@@ -3,8 +3,8 @@ import Button from './Button'
 const App = () => {
   return (
     <div>
-      <p>Digital Innovation One</p>
-      <p>Bem vindo a nossa aula =D.</p>
+      <p>Alexis Matos</p>
+      <p>Debbug.</p>
       <div>Webpack 4</div>
       <Button />
     </div>

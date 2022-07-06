@@ -8,11 +8,15 @@
 - HTML5 & CSS3
 - VSCode
 - JavaScript
-- Node.js
+- Node
 - TypeScript
 - XML & JSON
 - HTTP & SSL & WebSocket
-- ReactJS (JSX)
+- React
+- JSX
+- BabelJS
+- Webpack
+- ESlint
 
 ### Links
 
@@ -22,3 +26,6 @@
 - [Fórum] (https://stackoverflow.com/)
 - [Object error] (https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Error)
 - [TypeScript] (https://www.typescriptlang.org/)
+- [BabelJS] (https://babeljs.io/)
+- [Webpak] (https://webpack.js.org/)
+- [ESlint] (https://eslint.org/)

@@ -282,3 +282,69 @@ Gatsby;
 Jest;
 React i18n Next
 ------------------------------------------------------------------------
+
+2. Integrando webpack ao desenvolvimento com ReactJS
+2.1 O que é webpack?
+É um module bundler (um empacotador de módulos para aplicações JS)
+Gerar bundler que será utilizado no HTML, em ES5
+-------------------------------------------------------------------------
+
+2.2 Aprenda a configurar o webpack
+
+Principais conceitos:
+Entry - Utilizando grafo, o Webpack precisa de um ponto de entrada para buscar todos os módulos e dependências.
+Output - É para determinar quais são os bundlers que o Webpack irá emitir.
+Loaders - É para permitir que o Webpack gerencia arquivos não só Javaascript.
+Plugins - Plugins podem ser utilizados para otimização de pacotes, minificação, injeção de scripts e muito mais.
+Mode - Utilizados para abordagem de configuração zero. É possível configurar módulos como production, development ou none:
+	Production: Trás otimizações internas
+	Development: É executado com três plugins: UglifyJsPlugin, ModuleConcatenationPlugin e NoEmitOnErrorsPlugin.
+
+1. Steps:
+. npm i -D webpack webpack-cli
+. "build":"webpack --mode production"
+. npm i @babel/core babel-loader @babel/preset-env @babel/preset-react --save-dev
+. Criar o arquivo webpack.config.js
+. npm i react react-dom
+. npm i -D babel-preset-react
+. npm i -D webpack-dev-server
+-------------------------------------------------------------------------
+
+2.3 Instalação e configuração do ESLint
+padronizar as escritas em códigos simultâneos
+
+1. Steps:
+. npm install --save-dev eslint babel-eslnt eslint-plugin-react eslint-watch
+-------------------------------------------------------------------------
+
+3. Conceito aplicados aos tipos de dados e condições da biblioteca
+3.1 Renderização Condicional
+Em React, você pode criar componentes distintos que encapsulam o comportamento que você precisa. Então, você pode renderizar apenas alguns dos elementos, dependendo do estado da sua aplicação
+. Variáveis de elementos
+. If inline com o Operador Lógico &&
+. if-Else inline com Operador Condicional
+. Evitando que um componente seja renderizado
+-------------------------------------------------------------------------
+
+3.2 Listas e Chaves
+. Renderizando múltiplos componentes
+. Componente de lista Básico
+. Chaves
+. Extraindo Componentes com Chaves
+. Chave devem ser únicas apenas entre Elementos Irmão
+-------------------------------------------------------------------------
+
+3.3 Manipulando Eventos
+Manipular eventos em elementos React é muito semelhante a manipular eventos em elementos do DOM. Existem algumas diferenças sintáticas:
+1. Eventos em React são nomeados usando camelCase ao invés de letras minúsculas.
+2. Com o JSX você passa uma função como manipulador de eventos ao invés de um texto
+-------------------------------------------------------------------------
+
+3.4 Dicas para pensar como ReactJS
+1. Comece com o Mock - mock.js = um arquivo de camada de serviço
+2. Separe a UI em uma Hierarquia de Componentes
+3. Crie uma versão estática em React
+4. Identifique a Representação mínima (mas, completa) do State da UI
+5. Identifique onde o state deve ficar
+6. Adicione o fluxo de dados inverso
+
