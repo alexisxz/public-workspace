@@ -537,3 +537,20 @@ Segurança
 #############################################################
 Introdução aos React Hooks
 #############################################################
+O que são Hooks?
+Hooks são uma nova adição do react, os quais facilitam o gerenciamento de estado e descoplamento dos componentes.
+
+O que são Mocks?
+São objetos que simulam o compartamento de objetos reais de forma controlada.
+
+#############################################################
+Trabalhando com States & Effects no ReactJS
+#############################################################
+2. O que são hooks?
+Hookes(Ganchos) são chamadas que buscam seus componentes.
+-------------------------------------------------------------------------
+
+3. Criando seu projeto React:
+1. npx create-react-app aula-hooks[nome do projeto]
+2. Organizando o projeto:
+	

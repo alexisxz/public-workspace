@@ -20,6 +20,7 @@
 - Redux
 - Jest
 - Jest-cucumber
+- Hooks
 
 ### Links
 
@@ -27,6 +28,8 @@
 - [Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 - [Methods](https://www.w3.org/)
 - [Forum](https://stackoverflow.com/)
+- [Git initialization](https://www.youtube.com/watch?v=73L35pATTv0)
+- [GitHub initialization](https://www.youtube.com/watch?v=SX44xsh7J5A&feature=youtu.be)
 - [Object error](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Error)
 - [TypeScript](https://www.typescriptlang.org/)
 - [BabelJS](https://babeljs.io/)
