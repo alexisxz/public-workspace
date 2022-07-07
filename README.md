@@ -22,8 +22,24 @@
 - Jest-cucumber
 - Hooks
 
-### Links
+### Creating a React Project - Steps
 
+1. npx create-react-app aula-hooks[project name]
+2. project organization:
+    1. If you will not make tests, delete: src: AppTest.js; reportWebVitals.js; setupTest.js | and delete in index.js all references of reportWebVitals.js
+	2. In src, create the folder: Components
+	3. For each component, create a pasta into Components folder
+	4. Create a folder App inside Components folder
+	5. Move App.js; App.css and logo.svg to App folder
+	6. Into App.js, remove all return in the App, create an H1 Hello world, delete the logo import and remove the logo file
+3. Good practices:
+   1. Every js component file, should start with uppercase (ex. Counter.js)
+   2. Every useState function to set a value should start with set (ex. setValue)
+4. [Video](https://www.youtube.com/watch?v=Cea1EsjoVPM)
+
+
+### Links
+****
 - [Comp. IMG](https://tinypng.com/)
 - [Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 - [Methods](https://www.w3.org/)
@@ -37,3 +53,4 @@
 - [ESlint](https://eslint.org/)
 - [Jest](https://jestjs.io/)
 - [Cucumber](https://cucumber.io/)
+

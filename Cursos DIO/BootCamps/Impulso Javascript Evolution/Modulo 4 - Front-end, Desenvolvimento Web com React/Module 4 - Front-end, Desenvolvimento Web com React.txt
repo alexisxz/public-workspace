@@ -550,7 +550,61 @@ Trabalhando com States & Effects no ReactJS
 Hookes(Ganchos) são chamadas que buscam seus componentes.
 -------------------------------------------------------------------------
 
-3. Criando seu projeto React:
-1. npx create-react-app aula-hooks[nome do projeto]
-2. Organizando o projeto:
-	
+3. Creating your React project:
+1. npx create-react-app aula-hooks[project name]
+2. project organization:
+	1. If you will not make tests, delete: src: AppTest.js; reportWebVitals.js; setupTest.js | and delete in index.js all references of reportWebVitals.js
+	2. In src, create the folder: Components
+	3. For each component, create a pasta into Components folder
+	4. Create a folder App inside Components folder
+	5. Move App.js; App.css and logo.svg to App folder
+	6. Into App.js, remove all return in the App, create an H1 Hello world, delete the logo import and remove the logo file
+3. Code!
+-------------------------------------------------------------------------
+
+5. Como criar um componentes utilizando estados
+useState -> retorna um stateful (um estado com memoria para guardar o componente)
+Exemplo:
+quantity é o valor, upquantity é a função e o 1 dentro do useState é o valor inicial do valor.
+
+import { useState } from 'react';
+
+function Smartcounter() {
+    const [quantity, upQuantity] = useState(1);
+
+    return (
+        <>
+            <h1>{quantity}</h1>
+            <button onClick={() => upQuantity(quantity + 1)}>Increase</button>
+        </>
+    )
+}
+
+export default Smartcounter;
+
+-------------------------------------------------------------------------
+
+6. Criando um componente prático
+Atalho: rfc
+-------------------------------------------------------------------------
+
+7. Trabalhando com efeitos colaterais (useEffect)
+
+Sintaxe:
+useEffect(() => {
+
+    }, [])
+
+Exemplo:
+document.get... = a função
+[value] = o valor que vai ser alterado por conta do efeitos
+
+useEffect(() => {
+        document.getElementById('currency').innerHTML = 2.00 * value;
+    }, [value])
+-------------------------------------------------------------------------
+
+#############################################################
+Ciclo de Vida e suas fases
+#############################################################
+1. Aprofundando sobre o ciclo de vida do react
