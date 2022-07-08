@@ -53,4 +53,11 @@
 - [ESlint](https://eslint.org/)
 - [Jest](https://jestjs.io/)
 - [Cucumber](https://cucumber.io/)
+- [Creating Figma componenets](https://www.youtube.com/watch?v=G1xmkQeExJo)
+
+### Learning
+ - [Figma: The Ultimate Crash Course](https://www.youtube.com/watch?v=TYhp4s-vjK4&list=PLvnhVb8yYRQ3TDOsSgN0pf0XqG6E56IYM)
+
+### Topics to check after
+ - [tailwindcss](https://tailwindcss.com/)
 

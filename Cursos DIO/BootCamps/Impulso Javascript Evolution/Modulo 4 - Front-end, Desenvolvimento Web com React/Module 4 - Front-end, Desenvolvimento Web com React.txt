@@ -608,3 +608,91 @@ useEffect(() => {
 Ciclo de Vida e suas fases
 #############################################################
 1. Aprofundando sobre o ciclo de vida do react
+Fases:
+Inicialização
+Montagem
+Atualização
+Desmontagem
+-------------------------------------------------------------------------
+
+1.2 O que são Hooks e como ele pode otimizar o código
+Hooks são uma nova adição ao React 16.8. Eles permitem que você use o state e outros recursos do React sem escrever uma classe.
+
+Hooks:
+useState
+useEffect
+useContext
+useReducer
+useCallback
+useMemo
+useRef
+useImperativeHandle
+useLayoutEffect
+useDebugValue
+
+Regras dos Hooks:
+. Não use Hooks dentro de funções JavaScript comuns. E, vez disso você pode:
+	Chamar Hooks em componentes React.
+	Chamar Hooks dentro de Hooks customizados.
+-------------------------------------------------------------------------
+
+2. Técnicas com componenets e DOM
+2.1 Por que trabalhar com fragments
+1. Fragments: Um padrão comum no React é que um componenet pode retornar múltiplos elementos. Os Fragmentos permitem agrupar uma lista de filhos sem adicionar nós extras ao DOM
+-------------------------------------------------------------------------
+
+2.2 Error Boundaries: Resolve um erro da UI para não quebrar a aplicação
+-------------------------------------------------------------------------
+
+2.3 Render Props: O termo se refere a uma técnica de compartilha código entre componenetes Reaact passando uma prop cujo valor é uma função.
+-------------------------------------------------------------------------
+
+2.4 Typechecking: Na medida em que sua aplicação cresce, você pode capturar muitos bugs com chacagem de tipos. Em algumas aplicações, você pode usar extensões do JavaScript como o Flow ou TypeScript para checar os tipos de toda a sua aplicação. Porém, mesmo se você não usá-las, React possui algumas habilidades de checagem de tipos nativas.
+-------------------------------------------------------------------------
+
+2.5 Refs e DOM
+Com Refs é possível acessar a árvore do DOM e/ou elementos React.
+
+Quando utilizar:
+> Manipulação de bibliotecas de terceiros
+> Gerenciamento de inputs (foco), seleção de textos ou reprodução de mídias.
+> Animações imperativas
+-------------------------------------------------------------------------
+
+3. Organizando o seu projeto
+3.1 O que é um Dumb Components
+Preocupa-se com a apresentação
+Recebem valores via props.
+Não possuem dependências com o restante da aplicação
+Não especificam como os dados são carregador ou sofrem mutação
+Recebem valores e callbacks exclusivamente via props.
+Raramente possuem estados, quando precisam de estado é para controlar a interface e não dados do usuário
+São escritos na maioria das vezes como componenes funcionais
+
+Exemplos:
+Button
+Card
+Sidebar
+Footer
+List
+Menu
+-------------------------------------------------------------------------
+
+4. Smart Components
+Preocupam-se como as coisas vão funcionar.
+Podem conter Smart e Dumb components
+Providenciam dados e padrões de apresentaçã oou outros containers
+Na maioria dos casos possuem estado e podem chamar outros fluxos do sistema
+
+Exemplos:
+UserGallery
+UserPage
+FilterBook
+FollowersSidebar
+ListCards
+
+IMPORTANTE: Utilizar o memo no export default memo(PhotosGallery) por exemplo, para só renderizar quando tiver modificação.
+
+-------------------------------------------------------------------------
+
+
