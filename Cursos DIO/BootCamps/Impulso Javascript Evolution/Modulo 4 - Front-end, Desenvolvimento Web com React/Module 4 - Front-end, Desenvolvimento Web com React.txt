@@ -695,4 +695,32 @@ IMPORTANTE: Utilizar o memo no export default memo(PhotosGallery) por exemplo, p
 
 -------------------------------------------------------------------------
 
+#########################################################################
+Criando um front-end totalmente componetizado na prática com ReactJS
+#########################################################################
+1. Dividindo componentes:
+
+const GithubApp = () => {
+	
+	return (
+		<Layout>
+			</Profile>
+			</Repos>
+		</Layout>
+	)
+}
+
+2. Dentro dos componentes:
+
+const Profile = () => {
+	Get info for profile of user...
+	return (
+		<div>
+			infos of profile
+			of users
+		</div>
+	)
+}
+
+3. Remontando nossa inferface
 
