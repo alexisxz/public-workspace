@@ -30,7 +30,7 @@ export const WrapperTab = styled(Tab)`
     }
 
     &.is-selected {
-        box-shadow: 3px 2px 10px black rgba(0,0,0,0.2);
+        box-shadow: 3px 2px 10px rgba(0, 0, 0, 0.2);
     }
 `;
 WrapperTab.tabsRole = 'Tab';
@@ -47,3 +47,9 @@ export const WrapperTabPanel = styled(TabPanel)`
 ;
 `;
 WrapperTabPanel.tabsRole = 'TabPanel';
+
+export const WrapperList = styled.div`
+    display:flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+`;
