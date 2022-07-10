@@ -22,7 +22,7 @@ export const Wrapper = styled.div`
         border-radius: 8px;
 
         &:hover {
-            background-color: #181818;
+            background-color: #1504ff;
             box-shadow: 3px 2px 10px rgba(0, 0, 0, 0.2)
         }
 
