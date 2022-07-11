@@ -21,6 +21,8 @@
 - Jest
 - Jest-cucumber
 - Hooks
+- PostgreSQL
+- pgAdmin
 
 ### Creating a React Project - Steps
 
@@ -54,6 +56,8 @@
 - [Jest](https://jestjs.io/)
 - [Cucumber](https://cucumber.io/)
 - [Creating Figma componenets](https://www.youtube.com/watch?v=G1xmkQeExJo)
+- [PostgreSQL](https://www.postgresql.org/)
+- [pgAdmin](https://www.pgadmin.org/)
 
 ### Learning
  - [Figma: The Ultimate Crash Course](https://www.youtube.com/watch?v=TYhp4s-vjK4&list=PLvnhVb8yYRQ3TDOsSgN0pf0XqG6E56IYM)
