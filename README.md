@@ -23,6 +23,7 @@
 - Hooks
 - PostgreSQL
 - pgAdmin
+- PL/PGSQL
 
 ### Creating a React Project - Steps
 

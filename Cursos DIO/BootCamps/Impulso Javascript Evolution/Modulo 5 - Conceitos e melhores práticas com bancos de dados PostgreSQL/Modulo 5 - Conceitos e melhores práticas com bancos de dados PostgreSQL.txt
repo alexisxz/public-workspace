@@ -237,10 +237,10 @@ Date/Time types
 
 6. DML e DDL
 DML
-Data Manipulation Language
+Data Manipulation Language - Manipulando os dados da tabela por exemplo
 INSERT, UPDATE, DELETE, SELECT
 
-DDL
+DDL - Criando as tabelas por exemplo
 Data Definition Language
 CREATE, ALTER, DROP
 CREATE [objeto] [nome do objeto] [opção];
@@ -250,7 +250,208 @@ CREATE TABLE IF NOT EXISTS banco (
 	nome VARCHAR(50) NOT NULL,
 	data_criacao TIMESTAMP NOT NULL DEFAULT NOW()
 );
+-------------------------------------------------------------------------
 
+4.Fundamentos da Structured Query Language (SQL)
+4.1 Conheça o DML e o Truncate
 
+1. Melhores praticas:
+> Criar/Acrescentar colunas que são 'atributos básicos' do objeto, Exemplo: tabela CLIENTE: coluna TELEFONE / coluna AGENCIA_BANCARIA
+> Cuidado com regraas (constraints)
+> Cuidado com o excesso de FKs
+> Cuidado com o tamanho indevido de colunas. Exemplo: coluna CEP VARCHAR(255)
 
+2. DML - CRUD
+SELECT (campos,) FROM tabela [condições]
+SELECT numero, nome FROM banco WHERE ativo IS TRUE;
+SELECT nome FROM cliente WHERE email LIKE '%gmail.com';
+
+INSERT INTO agencia (banco_numero, numero, nome) VALUES (341, 1, 'Centro da cidade')
+porém, da para usar on conflict para evitar duplicação:
+INSERT INTO agencia (banco_numero, numero, nome) VALUES (341, 1, 'Centro da cidade') ON CONFLICT (banco_numero, numero) DO NOTHING;
+
+UPDATE - jamais faça sem WHERE
+UPDATE (tabela) SET campo1 = novo_valor WHERE (condição);
+
+DELETE - jamais faça sem where
+DELETE FROM (tabela) SET campo1 = novo_valor WHERE (condição);
+
+3. TRUNCATE
+"Esvazia" a tabela;
+-------------------------------------------------------------------------
+
+4.2 Funções agregadas em PostgreSQL
+AVG
+COUNT (opção: HAVING)
+MAX
+MIN
+SUM
+-------------------------------------------------------------------------
+
+3.3 Trabalhando com JOINs
+JOIN | INNER JOIN
+SELECT tabela_1.campos, tabela_2.campos FROM tabela_1 JOIN tabela_2 ON tabela_2.campo = tabela_1.campo
+
+LEFT JOIN | LEFT OUTER JOIN - trás os valores sem relação da tabela da esquerda como valor nulo
+SELECT tabela_1.campos, tabela_2.campos FROM tabela_1 LEFT JOIN tabela_2 ON tabela_2.campo = tabela_1.campo
+
+RIGHT JOIN | RIGHT OUTER JOIN - trás os valores sem relação da tabela da direita como valor nulo
+SELECT tabela_1.campos, tabela_2.campos FROM tabela_1 RIGHT JOIN tabela_2 ON tabela_2.campo = tabela_1.campo
+
+FULL JOIN | FULL OUTER JOIN - trás todos os sem relações com valores nulos
+SELECT tabela_1.campos, tabela_2.campos FROM tabela_1 FULL JOIN tabela_2 ON tabela_2.campo = tabela_1.campo
+
+CROSS JOIN
+Todos os dados de uma tabela serão cruzados com todos os dados da tabela referenciada no CROSS JOIN criando uma matriz.
+SELECT tabela_1.campos, tabela_2.campos FROM tabela_1 CROSS JOIN tabela_2
+-------------------------------------------------------------------------
+
+3.4 Otimizando o código com CTE (Common Table Expressions)
+Forma auxiliar de organizar "statements", ou seja, blocos de códigos, para consultas muito grandes, gerando tabelas temporárias e criando relacionamentos entre elas.
+
+Dentro dos statements podem ter SELECTs, INSERTs, UPDATEs ou DELETEs.
+
+WITH STATEMENTS:
+WITH [nome1] AS (
+	SELECT (campos,)
+	[WHERE]
+), [nome2] AS (
+	SELECT (campos,)
+	FROM tabela_B
+	[WHERE]
+)
+SELECT [nome1].(compras,),[nome2].(campos,)
+FROM [nome1]
+JOIN[nome2]
+-------------------------------------------------------------------------
+
+4. Comandos avançados da Structured Query Language (SQL)
+4.1 Como as views auxiliam no acesso ao banco de dados
+São camadas para as tabelas. São alias para uma ou mais queries.
+Aceitam comandos de SELECT, INSERT, UPDATE e DELETE
+
+CREATE[or REPLACE] VIEW name AS query
+
+CREATE OR REPLACE VIEW vw_bancos AS (
+	SELECT numero, nome, ativo
+	FROM banco
+);
+SELECT numero, nome, ativo
+FROM vw_bancos;
+
+RECURSIVE
+-------------------------------------------------------------------------
+
+4.2 Conheça um dos principais conecitos de banco de dados: transações
+Conceito fundamental de todos os sistemas de banco de dados.
+Conceito de múltiplas etapas/códigos reunidos em apenas 1 transação, onde o resultado precisar ser tudo ou nada
+Exemplos:
+BEGIN;
+	UPDATE conta SET valor = valor - 100.00 WHERE nome = 'Alice';
+	UPDATE conta SET valor = valor + 100.00 WHERE nome = 'Bob';
+COMMIT;
+
+Se acontecer algum erro
+BEGIN;
+	UPDATE conta SET valor = valor - 100.00 WHERE nome = 'Alice';
+	UPDATE conta SET valor = valor + 100.00 WHERE nome = 'Bob';
+ROLLBACK;
+-------------------------------------------------------------------------
+
+4.3 Conheça as funções que podem ser criadas pelo desenvolvedor.
+Conjunto de códigos que são executados dentro de uma transação com a finalidade de facilitar a programação e obter o reaproveitamento/reutilização de códigos.
+
+Existem 4 tipos de funções:
+> query language function (funções escritas em SQL)
+> procedural language function (funções escritas em, por xemplo, PL/pgSQL)
+> internal function
+> C-language functions
+
+Linguagens:
+> SQL
+> PL/PGSQL
+> PL/PY
+> PL/PHP
+> PL/RUBY
+> PL/Java
+> PL/Lua
+...etc
+
+Definação:
+CREATE OR REPLACE FUNCTION [nome da função]
+
+Para IDEMPOTÊNCIA:
+> Mesmo nome
+> Mesmo tipo de retorno
+> Mesmo número de parâmetros/argumentos
+
+RETURNS:
+INTEGER
+CHAR / VARCHAR
+BOOLEAN
+ROW
+TABLE
+JSON
+
+SECURITY:
+INVOKER
+DEFINER
+
+COMPORTAMENTO:
+IMMUTABLE
+STABLE
+VOLATILLE
+
+Boas práticas:
+CALLED ON NULL INPUT - Padrão, se qualquer um dos parâmetros/argumentos for NULL, a função será executada.
+RETURNS NULL ON NULL INPUT = Se qualquer um dos parâmetros/argumentos for NULL, a função retornará NULL
+SECURITY INVOKER - padrão, a função é executada com as permissões de quem executa.
+SECURITY DEFINER - A função é executada com as permissões de quem criou a função.
+
+Recursos:
+COST - Custo/row em unidades de CPU
+ROWS - Números estimados de linhas que será analisada pelo planner
+
+SQL FUNCTIONS: não é possível utilizar transações
+
+CREATE OR REPLACE FUNCTION fc_somar (INTEGER, INTEGER)
+RETURNS INTEGER
+LANGUAGE SQL
+AS $$
+	SELECT $1 + $2;
+&&;
+
+or definindo (boa prática)
+CREATE OR REPLACE FUNCTION fc_somar(num1 INTEGER, num2 INTEGER)
+RETURNS INTEGER
+LANGUAGE SQL
+AS $$
+	SELECT num1 + num2;
+$$;
+
+PLPGSQL FUNCTIONS:
+
+CREATE OR REPLACE FUNCTION banco_add(p_numero INTEGER, p_nome VARCHAR, p_ativo BOOLEAN)
+RETURNS BOOLEAN
+LANGUAGE PLPGSQL
+AS $$
+DECLARE variavel_id INTEGER;
+BEGIN
+	SELECT INTO variavel_id numero FROM banco WHERE nome=p_nome;
+
+	IF variavel_id IS NULL THEN
+		INSTER INTO banco (numero, nome, ativo) VALUES (p_numero, p_nome, p_ativo);
+	ELSE
+		RETURN FALSE;
+	END IF;
+
+	SELECT INTO variavel_id numero FROM banco WHERE nome=p_nome;
+
+	IF variavel_id IS NULL THEN
+		RETURN FALSE;
+	ELSE
+		RETURN TRUE;
+	END IF;
+END; $$;
+SELECT banco_add(13, 'Banco azarado', true);
 
