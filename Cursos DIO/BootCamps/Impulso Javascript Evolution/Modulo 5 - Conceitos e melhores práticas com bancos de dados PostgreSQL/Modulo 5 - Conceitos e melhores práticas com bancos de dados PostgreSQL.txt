@@ -455,3 +455,127 @@ BEGIN
 END; $$;
 SELECT banco_add(13, 'Banco azarado', true);
 
+
+#############################################################
+Introdução ao MongoDB e Banco de Dados NoSQL
+#############################################################
+
+1. Introdução ao NoSQL
+NoSQL - Not Only SQL - Não relacionais
+
+Diferenças NoSQL x SQL:
+Escabildiade:
+SQL - Vertical
+NoSQL - Horizontal - Maior desempenho na aplicação e escabilidade infinita
+
+Schema:
+SQL - Depende das regras de schema
+NoSQL - Schemaless
+
+Performance:
+SQL - Depende do disco
+NoSQL - Depende do cluster
+
+Transações:
+SQL:
+	Atomicidade
+	Consistência
+	Isolamento
+	Durabilidade
+NoSQL:
+	Basically Available
+	Soft-State
+	Eventually Consistent
+-------------------------------------------------------------------------
+
+2. Conhecendo os tipos de banco de dados NoSQL
+2.1 Tipos de banco NoSQL
+Document Store
+Key-Value Store
+Wide-Column Store
+Graph Store
+
+1. Graph Store
+Comum em detecção de fraudes, mecanismos de recomendação, rede sociais, sistema de arquivo, games...
+Top 3:
+Neo4j
+Microsoft Azure Cosmos DB
+ArangoDB
+-------------------------------------------------------------------------
+
+2.2 Coluna/Familia de colunas
+TOP 3:
+Cassandra
+HBase
+Microsoft Azure Cosmos DB
+
+Keyspace: agrupamento de familas de colunas => database
+Column Family/table: agupamento de colunas => table
+Row key: chave que representa uma linha de coluna => PK (Primary Key)
+Column: representa um valor contendo: Name, Value timestamp
+
+Onde usar:
+Registro de transações: compras, resultados de testes, filmes, assistidos e localização mais recente do filme.
+Rastreando praticamente qualquer coisa, incluindo status do pedido, pacotes, etc..
+-------------------------------------------------------------------------
+
+2.3 Key-Value
+Armazena um conjunto de dados, seja ele simples ou complexo, identificados por um identificador exclusivo.
++ Bom desempenho em aplicação na nuvem.
+- Menor capacidade de busca
+
+Onde usar:
+cache, sessão de usuário, carrinho de compra...
+
+Top 3:
+Redis
+Amazon DynamoDB
+Microsoft Azure Cosmos DB
+
+Redis:
++ Alto desempenho
++ Estrutura de dados na memória
++ Versatilidade de uso
++ Replicação e persistência.
+Quem usa? Twitter, github, stackoverflow...
+-------------------------------------------------------------------------
+
+2.4 Document - Modelo mais utilizado
+Dados e documentos autocnitod e auto descritivos. Permite redundância e inscosistência.
+Livre de esquemas podendo utilzar JSON, XML entre outros.
+
+TOP 3:
+MongoDB
+Amazon DynamoDB
+Microsoft Azure Cosmos DB
+-------------------------------------------------------------------------
+
+3. Introdoução ao MongoDB e instalação
+3.1 Introdução
+> Código aberto
+> Alta performance
+> Schema-free
+> Utiliza json para armazenamento dos dados
+> Suporte a indices
+> Auto-Sharding
+> Map-Reduce
+> GridFS
+
+Estrutura:
+> Document => Tupla/Registro
+> Collection => Tabela
+> Embedding/linking => Join
+
+Quando usar:
+Quando tem grande volume de dados
+Dados não necessariamente estruturados
+
+Quando não usar:
+Necessidade de relacionamento/joins
+Propriedades ACID e transações importantes
+Curiosidade: Diversas entidades de pagamento não homologam sistema cujos dados financeiros dos clientes não estejam em bancos de dados relacionais tradicionais
+-------------------------------------------------------------------------
+
+3.2 Instalação
+Utilizando o Docker: Docker é um conjunto de produtos de plataforma como serviço que usam virtualização de nível de sistema operacional para entregar software em pacotes chamados contêineres. Os contêineres são isolados uns dos outros e agrupam seus próprios softwares, bibliotecas e arquivos de configuração.
+

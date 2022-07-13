@@ -1,0 +1,78 @@
+#############################################################
+Introdução a orquestração de contêiners com Docker
+#############################################################
+1. Introdução
+1.1 VW e Container
+VM
+Escalonamento Vertifical
+Difícil atualização
+
+Container:
+Escalonamento Horizontal
+Fácil atualização
+-------------------------------------------------------------------------
+
+1.2 Arquitetura do Docker:
+Container image: pacote com todas dependencias para criar o container
+Dockerfile: contem todas as informações para fazer o build
+Build: gera uma imagem de acordo com o dockerfile
+Container: é uma instancia da imagem que representa uma aplicação, processo ou serviço
+Volumes: Armazena os dados em discos, persiste informações no disco
+Tag: ajuda no versionamento da imagens
+Multi-stage-Build: Compila varios runners
+Repository: Coleção de imagens
+Registry: Serviço que provê o acesso para um repositorio como o Docker Hub
+Docker Hub: onde fica os repositories
+Compose: Pode criar multiplos containers com um comando
+-------------------------------------------------------------------------
+
+2. Primeiros passos com o Docker
+2.3 Principais comandos
+Run - criação do container
+ps - listar os containers
+info - trazer infos do docker
+images - images para criar nossos containers
+exec - executar o container
+stop, start
+logs - listar os logs do container
+inpect - listar todas as configurações do container
+pull - baixar as imagens do nosso repositorio privado
+commit - para comitar modificações no container
+tag - para melhorar o versionamento
+login, logout
+push - armazenar no repositorio
+search - procurar imagem
+rm - remover container
+rmi - remover imagem
+export, import - containers 
+save, load
+-------------------------------------------------------------------------
+
+3. Rede do Docker
+3.1 Tipos de rede e como funciona
+Bridge: É a rede default do docker, utilizado para comunicação entre containers
+Host: Remove o isolamento de rede, o container responde diretamente pela placa de rede do host
+Overlay: Permite a comunicação entre containers de host diferentes.
+Macvlan: Permite atribuir um endereço MAC ao container tornando ele visível como um dispositivo físico na rede
+None: sem rede
+
+-------------------------------------------------------------------------
+
+4. Armanezamento no Docker
+4.1 Tipos de armazenamento
+Volume
+bind mount
+tmpfs mount
+-------------------------------------------------------------------------
+
+5. Limites: Sempre é bom limitar a memoria do seu container para não crachar o computador:
+docker run -d --memory 30m bosybox[image] sleep 3600
+
+Limitando o uso da cpu para 50%
+docker run --cpus=".5" -d --rm progrium/stress -c 8 -t 30s
+-------------------------------------------------------------------------
+
+projeto:
+Entrar no express-mongo-docker
+dar os comandos:
+docker-compose up -d

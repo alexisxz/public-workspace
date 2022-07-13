@@ -5,6 +5,7 @@
 ### LPs and more+
 
 - Git & GitHub
+- Docker
 - HTML5 & CSS3
 - VSCode
 - JavaScript
@@ -24,6 +25,10 @@
 - PostgreSQL
 - pgAdmin
 - PL/PGSQL
+- Neo4j (Graph Store)
+- Cassandra (Column Family/table)
+- Redis (key-value)
+- MongoDB (document)
 
 ### Creating a React Project - Steps
 
@@ -59,6 +64,7 @@
 - [Creating Figma componenets](https://www.youtube.com/watch?v=G1xmkQeExJo)
 - [PostgreSQL](https://www.postgresql.org/)
 - [pgAdmin](https://www.pgadmin.org/)
+- [TryRedis.io](https://try.redis.io/)
 
 ### Learning
  - [Figma: The Ultimate Crash Course](https://www.youtube.com/watch?v=TYhp4s-vjK4&list=PLvnhVb8yYRQ3TDOsSgN0pf0XqG6E56IYM)
