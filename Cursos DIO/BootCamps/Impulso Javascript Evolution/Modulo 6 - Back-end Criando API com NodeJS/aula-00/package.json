@@ -1,0 +1,15 @@
+{
+  "name": "primeira-aula",
+  "version": "1.0.0",
+  "description": "projeto para terinar e inicar no node",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "javacript;node"
+  ],
+  "author": "Alexis Matos",
+  "license": "ISC"
+}

@@ -9,7 +9,7 @@
 - HTML5 & CSS3
 - VSCode
 - JavaScript
-- Node
+- NodeJS
 - TypeScript
 - XML & JSON
 - HTTP & SSL & WebSocket
@@ -53,6 +53,7 @@
 ****
 - [Comp. IMG](https://tinypng.com/)
 - [Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+- [NPM codes](https://www.npmjs.com/)
 - [Methods](https://www.w3.org/)
 - [Forum](https://stackoverflow.com/)
 - [Git initialization](https://www.youtube.com/watch?v=73L35pATTv0)

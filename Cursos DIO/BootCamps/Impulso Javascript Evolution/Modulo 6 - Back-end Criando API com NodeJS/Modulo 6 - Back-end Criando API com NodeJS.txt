@@ -1,0 +1,60 @@
+#############################################################
+Instalando e Configuração seu Ambiente Node.js
+#############################################################
+
+1.1 O que é Node.JS
+> Não é uma linguagem de programação
+> Não é um framework Javascript
+> Interagir com banco de dados
+> Criar servidores e Web Apps
+> Se comunicar com outras Apps
+> Trabalhar com websockets e apps em tempo real
+-------------------------------------------------------------------------
+
+1.2 O que é NPM[Node Package Manager]
+> Gerenciador de pacotes e dependências
+-------------------------------------------------------------------------
+
+4.2 Conhecendo o package.json
+iniciando o projeto node: npm init
+
+O que é package.json: trás todas as configurações do projeto, uma configuração padrão
+
+#############################################################
+Introdução ao Node.js com Javascript
+#############################################################
+
+1.3 Conceitos (relembrando):
+Arrow function - função de expressão de sintaxe curta, sempre anônima, não pode ser nomeada.
+ex:
+var x = () => {};
+variavel = função não nomeada => o que essa função vai realizar
+-------------------------------------------------------------------------
+
+1.4 conhecendo o Node.js
+> Todo navegador possui um interpretador de javascript rodando por trás dos panos para fazer as coisas funcionarios, transformando o código em um bit code
+Browser -> Engine -> Javascript rodando
+> To run the javascript outside of the browser
+-------------------------------------------------------------------------
+
+1.5 Como funciona?
+> As requisições no Node.js são assíncronas, agilizando assim a entrega. Trabalhando em Event-loop
+> ele vai entregando o que ta pronto, mesmo se o que ta antes vim primeiro
+
+1. Blocking, Non-blocking e Event-loop
+> Blocking - síncrono, pois a entrega depende que todas as requisições estejam prontas
+> Non-blocking - assíncrono, pois a entrega é feita mesmo sem todas as requisições estarem prontas. (trabalha com o Event-loop)
+> Event-loop - execução das requisições de forma assíncrona.
+-------------------------------------------------------------------------
+
+1.6 O que é o NPM?
+É uma ferramente de gerenciamento de pacodes do Node
+
+Imagine um repositório gigantesco com inúmeras ferramentas de desenvovliment... esse é o NPM do NodeJS
+-------------------------------------------------------------------------
+
+1.7 criando o package.json e o server:
+npm init - ininciando o pacote
+* npm init -y (ele vai criar automaticamente dizendo yes para tudo)
+-------------------------------------------------------
+
