@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  db:
+    container_name: db
+    image: mongo
+    restart: always
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=dio
+      - MONGO_INITDB_ROOT_PASSWORD=dio
+    ports:
+      - 27017:27017
+    volumes:
+      - C:/workspace/public-workspace/Cursos DIO/BootCamps/Impulso Javascript Evolution/Modulo 5 - Conceitos e melhores práticas com bancos de dados PostgreSQL/mongodb-class/dbdata:/data/db

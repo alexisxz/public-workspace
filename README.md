@@ -29,6 +29,9 @@
 - Cassandra (Column Family/table)
 - Redis (key-value)
 - MongoDB (document)
+- MongoCloud
+- Mongo Compass
+- Robo 3T
 
 ### Creating a React Project - Steps
 
@@ -65,6 +68,7 @@
 - [PostgreSQL](https://www.postgresql.org/)
 - [pgAdmin](https://www.pgadmin.org/)
 - [TryRedis.io](https://try.redis.io/)
+- [Mongodb Cloud](https://cloud.mongodb.com/)
 
 ### Learning
  - [Figma: The Ultimate Crash Course](https://www.youtube.com/watch?v=TYhp4s-vjK4&list=PLvnhVb8yYRQ3TDOsSgN0pf0XqG6E56IYM)

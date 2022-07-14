@@ -579,3 +579,70 @@ Curiosidade: Diversas entidades de pagamento não homologam sistema cujos dados 
 3.2 Instalação
 Utilizando o Docker: Docker é um conjunto de produtos de plataforma como serviço que usam virtualização de nível de sistema operacional para entregar software em pacotes chamados contêineres. Os contêineres são isolados uns dos outros e agrupam seus próprios softwares, bibliotecas e arquivos de configuração.
 
+creating a .docker-compose.yml
+-------------------------------------------------------------------------
+
+4. Schema Design e boas práticas
+4.1 Schema Design
+
+Embedding vs Referência
+Embedding: (Boa prática usa-lo)
+	Documentos autocontido 
+
+Embedding:
+Pros:
+	Consulta informações em uma unica query
+	Atualiza o registro em uma unica operação
+Contras:
+	Limite de 16 MB por documento
+
+Referencia:
+Pros:
+	Documentos pequenos
+	Não duplica informações
+	Usando quando os dados não são acessado em todas as consultas
+Contras:
+	Duas ou mais queries ou utilização do $lookup
+
+Recomendações:
+One-to-one: prefira atributos chave-valor no documento
+One-to-few: prefira o embedding
+One-to-many e Many-to-many: prefira referencia
+-------------------------------------------------------------------------
+
+4.2 Boas práticas
+> Evite documentos muito grandes
+> Use nome campos objetivos e curtos
+> Analise as suas queries utilizando explain()
+> Atualize apenas os campos alterados
+> Evite negações em queries
+> Listas/arrays dentro dos documentos não podem crescer sem limite
+-------------------------------------------------------------------------
+
+4.3 JSON e BSON
+1. BSON:
+É UMa serialização codificada em binário de documentos semelhantes a JSON.
+Contém extenções que permitem a representação de tipos de dados que não fazem parte da especificação JSON. Por exemplo, BSON tem um tipo date, Object ID
+-------------------------------------------------------------------------
+
+5.2 Performance e índices [index]
+O indice da uma direção para buscar o item
+--------------------------------------------~----------------------------
+
+5.3 Agregações [Aggregations]: buscar informações de outros bancos
+Agregação é o procedimento de processar dados em uma ou mais etapas, onde o resultado de cada etapa é utilizado na etapa seguinte, de modo a retornar um reusltado combinado
+
+1. Agregação de proposit único
+> count
+> distinct
+Elas não permitem as customizações das agregações utilizando pipeline
+
+Pipelines: filtros e operadores:
+Agregações [aggregate)]:
+	operadores: $group, $addFields, etc..
+	funções: $sum, $avg, $max, $min, etc..
+	logicos: $and, $or, $not, $nor, etc..
+	comparação: <, >, <>, =, <=, >=
+
+
+
