@@ -56,5 +56,69 @@ Imagine um repositório gigantesco com inúmeras ferramentas de desenvovliment..
 1.7 criando o package.json e o server:
 npm init - ininciando o pacote
 * npm init -y (ele vai criar automaticamente dizendo yes para tudo)
--------------------------------------------------------
+-------------------------------------------------------------------------
 
+#############################################################
+Fundamentos de Node.js e Jest
+#############################################################
+
+1. Entendo o Node
+1.2 Conhecendo o Node
+Single-thread(javascript): cria uma pilha com as funções chamadas e executa uma por vez, mesmo que elas sejam concorrentes.
+Multi-thread: Executa as ações paralelamente, independentes se esta são concorrentes
+-------------------------------------------------------------------------
+
+2.1 Criando servidor
+1. yarn add nodemon -> instala a dependencia nodemon(um servidor dentro do node)
+2. jogando tudo no package.json e querendo puxar toda a instalação depois: yarn install
+3. yarn add express - é o que permite construir as rotas
+-------------------------------------------------------------------------
+
+2.2 Criando nossas Rotas em routes.js [src]
+import { Router } from 'express'
+
+const routes = Router()
+
+// GET - ler os dados
+// POST - criar dados
+// PUT/PATCH - editar os dados
+// DELETE - deletar os dados
+
+export { routes }
+-------------------------------------------------------------------------
+
+3. Instaliando o typescript: 
+3.1 Configurando:
+Ele vai como -D (desenvolvedor), pois ele não será apresentado ao cliente
+$ yarn add -D typescript 
+$ npx tsc --init - para iniciar o arquivo de inicialização do typescript
+$ yarn add -D ts-node-dev - para rodar o typescript direto sem precisa rodar o seu index.
+$ yarn add -D @types/express - adicionar o express no json
+-------------------------------------------------------------------------
+
+4. Conhecendo o Jest
+4.1 Configurando o Jest
+Jest é um framework, desenvovlido pelo Facebook, que permite escrever testes automatizados em aplicações JS ou TS.
+
+$ yarn add -D jest
+$ yarn add -D @types/jest
+$ yarn add -D ts-jes
+$ npx jest --init
+
+Descomentar testMatch
+-------------------------------------------------------------------------
+
+5. Padrão AAA
+5.1 Entendendo o padrão AAA
+> Arrange - Montagem do cenário de testes
+> Act - Ação que será testada
+> Assert - Validação dos resultados
+
+Vamos que ir no jest.config.ts, configurar o preset para: 'ts-jest',
+-------------------------------------------------------------------------
+
+6. Mocks e testes unitários
+6.1 Criando mocks e testes unitários
+Mocks: São objetos, que substituem implementações reais em um cenário de testes unitário. Isso permite validar apenas os comportamentos afetados pelo novo componente.
+
+Teste unitários: São os testes mais simples de serem escrtios na aplicação. Como o nome sugere a ideia é testar apenas o componente (unidade) ao qual ele faz referência
