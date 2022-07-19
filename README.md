@@ -13,6 +13,7 @@
 - TypeScript
 - XML & JSON
 - HTTP & SSL & WebSocket
+- REST API
 - React
 - JSX
 - BabelJS
