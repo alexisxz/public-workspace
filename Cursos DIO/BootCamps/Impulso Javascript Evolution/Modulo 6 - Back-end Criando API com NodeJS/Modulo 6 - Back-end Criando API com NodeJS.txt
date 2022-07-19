@@ -154,7 +154,8 @@ São testes que passam por toda a aplicação. Testamos a conexão com a API, ca
 Aplicando o Estilo Arquitetural REST com Node.js
 #############################################################
 
-1. Entendendo e preparando seu projeto
-1.3 Como funciona a API Rest do projeto
+projeto commitado no github como user-authentication
+
+
 
  
