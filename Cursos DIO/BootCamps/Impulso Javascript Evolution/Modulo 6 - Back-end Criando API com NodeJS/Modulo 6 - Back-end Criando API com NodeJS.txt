@@ -122,3 +122,39 @@ Vamos que ir no jest.config.ts, configurar o preset para: 'ts-jest',
 Mocks: São objetos, que substituem implementações reais em um cenário de testes unitário. Isso permite validar apenas os comportamentos afetados pelo novo componente.
 
 Teste unitários: São os testes mais simples de serem escrtios na aplicação. Como o nome sugere a ideia é testar apenas o componente (unidade) ao qual ele faz referência
+
+base.twig
+1. Testes unitários
+Base -> Testes unitário -menor custo
+Medio da piramide -> teste de integração -custo médio
+top da piramide -> testes e2e -custo alto
+
+1.2 Testes unitários
+São os testes mais simples de serem escritos na aplicação. Como o nome sugre a ideia é testar apenas o componente (unidade) ao qual ele faz referência 
+
+Mocks: São objetos, que substituem implementações reais em um cenário de testes unitários. Isso permite validar apenas os comportamentos afetados pelo novo componente.
+-------------------------------------------------------------------------
+
+2. Test-driven development
+2.1 TDD
+RED - Escrever um teste que falhe
+GREEN - Fazer o código funcionar
+REFACTOR - Otimizar o código
+------------------------------------------------------------------------
+
+3. Tests integrados
+São testes mais complexos, onde o objetivo é testar o funcionamento completa da aplicação simultâneamente.
+-------------------------------------------------------------------------
+
+4. Testes e2e
+São testes que passam por toda a aplicação. Testamos a conexão com a API, cadastro no banco de dados e todas as respostas esperadas
+-------------------------------------------------------------------------
+
+#############################################################
+Aplicando o Estilo Arquitetural REST com Node.js
+#############################################################
+
+1. Entendendo e preparando seu projeto
+1.3 Como funciona a API Rest do projeto
+
+ 
