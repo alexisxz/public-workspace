@@ -68,6 +68,7 @@
 - [Cucumber](https://cucumber.io/)
 - [Creating Figma componenets](https://www.youtube.com/watch?v=G1xmkQeExJo)
 - [PostgreSQL](https://www.postgresql.org/)
+- [ElephantSQL](https://www.elephantsql.com/)
 - [pgAdmin](https://www.pgadmin.org/)
 - [TryRedis.io](https://try.redis.io/)
 - [Mongodb Cloud](https://cloud.mongodb.com/)
