@@ -171,3 +171,80 @@ projeto commitado no github como user-authentication
 #############################################################
 Criando uma API REST com Node.js e TypeORM
 #############################################################
+
+1. Entendendo o TypeORM
+1.2 Conhecendo o TypeORM e entendendo seu papel
+ORM (Object Relational Mapper) é uma técnica de mapeamento de objeto relacional que permite fazer uma relação d objeto com os dados que os mesmos representam.
+
+TypeORM (ferramenta):
+> Um dos ORMs mais populares
+> Documentação simples
+> Fácil implementação
+> Compatível com varios bancos de dados (MySQL), MongoDB, Postgress, SQLite, etc)
+-------------------------------------------------------------------------
+
+2. Criando a API
+2.1 Inicializando a API
+$ npm init
+$ npm i typescript -D
+$ npx tsc --init
+$ npm i ts-node-dev -D
+> fazer algumas atualizações no tsconfig.json:
+    > "target": "es6"
+    > "strict": false
+> fazer algumas atualizações no package.json
+    > no script -> "dev":"ts-node-dev index.ts",
+-------------------------------------------------------------------------
+
+2.2 Construindo as primeiras rotas
+$ npm i express
+$ npm i @types/express -D
+
+CRUD:
+// criar um usuario Create = C
+// selecionar um usuario Read = R
+// editar um usuario Update = U
+// deletar um usuario Delete = D
+-------------------------------------------------------------------------
+
+2.5 Status code e enviando requisições
+Nos controllers deixar as validações
+Nos Services a conexão com o banco de dados
+-------------------------------------------------------------------------
+
+3. Configurando o TypeORM
+3.1 Configurando o TypeORM
+$ npm i typeorm@0.2.38 reflect-metadata
+$ npm i sqlite3
+> criar o arquivo: ormconfig.json
+> no package.json colocar um novo script: "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js"
+-------------------------------------------------------------------------
+
+3.2 Migrations e Entitities
+Criando a primeira magration:
+$ npx typeorm migration:create -n CriarUsuarios
+> Editando a migration criada
+Criando o banco de dados sqlite
+$ npm run typeorm migration:run
+-------------------------------------------------------------------------
+
+4. Tests automatizados
+4.1 Configurando o Jest
+$ npm i jest @types/jest ts-jest -D
+$ npx jest --init
+> configurar jest.config.ts
+    > bail: false,
+    > clearMocks: false,
+    > preset: "ts-jest",
+    > testMatch: [
+    "**/__tests__/**/*.ts)",
+    "**/test.ts"
+  ],
+    >
+-----------------------------------------------------------------------------
+
+5. TDD
+5.1 Conhecendo o TDD
+RED - escrever um teste que vai falhar
+GREEN - fazemos o teste passar
+REFACTOR - eliminar redundancia

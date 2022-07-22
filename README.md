@@ -33,6 +33,9 @@
 - MongoCloud
 - Mongo Compass
 - Robo 3T
+- SQLite
+- Beekeeper
+- TypeORM
 
 ### Creating a React Project - Steps
 
