@@ -241,10 +241,15 @@ $ npx jest --init
     "**/test.ts"
   ],
     >
------------------------------------------------------------------------------
+-------------------------------------------------------------------------
 
 5. TDD
 5.1 Conhecendo o TDD
 RED - escrever um teste que vai falhar
 GREEN - fazemos o teste passar
 REFACTOR - eliminar redundancia
+-------------------------------------------------------------------------
+
+#############################################################
+Integrando um Backend em Node.js com um Frontend em React para um E-commence
+#############################################################
