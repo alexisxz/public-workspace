@@ -161,3 +161,13 @@ Node.js com Bancos de Dados Relacionais (SQL)
 #############################################################
 
  projeto commitado no github como user-authentication
+
+#############################################################
+Microsserviços e Integrações com Node.js
+#############################################################
+
+projeto commitado no github como user-authentication
+
+#############################################################
+Criando uma API REST com Node.js e TypeORM
+#############################################################
