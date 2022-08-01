@@ -7,6 +7,7 @@
 - Git & GitHub
 - Docker
 - HTML5 & CSS3
+- TailwindCSS
 - VSCode
 - JavaScript
 - NodeJS
@@ -76,10 +77,3 @@
 - [pgAdmin](https://www.pgadmin.org/)
 - [TryRedis.io](https://try.redis.io/)
 - [Mongodb Cloud](https://cloud.mongodb.com/)
-
-### Learning
- - [Figma: The Ultimate Crash Course](https://www.youtube.com/watch?v=TYhp4s-vjK4&list=PLvnhVb8yYRQ3TDOsSgN0pf0XqG6E56IYM)
-
-### Topics to check after
- - [tailwindcss](https://tailwindcss.com/)
-
