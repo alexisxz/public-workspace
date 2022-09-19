@@ -12,7 +12,7 @@ import LayoutEffectTutorial from "./UseLayoutEffect/LayoutEffectTutorial";
 function App() {
   return (
     <div className="App">
-      <ImperativeHandle />
+      <ContextTutorial />
     </div>
   );
 }
